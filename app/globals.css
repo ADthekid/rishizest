@@ -25,3 +25,57 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-scrolling {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrolling 10s linear infinite;
+}
+
+.grad{
+  background-image:linear-gradient(#780bff 10%, #c400ff 50%);
+}
+
+.cans{
+  height: 240px;
+  width: auto;
+  padding: 10px;
+}
+
+.sect{
+  background-image: url(../public/background.png);
+  background-size: 100vw;
+  background-repeat: no-repeat;
+}
+
+input[type="radio"] {
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  margin:10px;
+  transform: translateY(0.15em);
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+
+div{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
