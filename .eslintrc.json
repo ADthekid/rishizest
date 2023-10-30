@@ -1,13 +1,3 @@
 {
-	"extends": "next/core-web-vitals",
-	"overrides": [
-		{
-			"files": ["app/outro/page.tsx"],
-			"rules": {
-				"@typescript-eslint/no-unsafe-member-access": "off",
-				"@typescript-eslint/no-unsafe-call": "off",
-				"@typescript-eslint/no-unsafe-assignment": "off"
-			}
-		}
-	]
+	"extends": "next/core-web-vitals"
 }
