@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-	apiKey: "AIzaSyCMazf-erfEHzcLVKMowmfdYJobeVygT48",
-	authDomain: "rishizest.firebaseapp.com",
+	apiKey: process.env.API_KEY,
+	authDomain: process.env.AUTH_DOMAIN,
 	projectId: "rishizest",
-	storageBucket: "rishizest.appspot.com",
-	messagingSenderId: "877383117483",
-	appId: "1:877383117483:web:6283b7d67524f1c41ea5ee",
+	storageBucket: process.env.STORAGE_BUCKET,
+	messagingSenderId: process.env.SENDER_ID,
+	appId: process.env.APP_ID,
 };
 
 // Initialize Firebase

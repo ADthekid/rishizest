@@ -18,12 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient (to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   user-select: none;
 }
 
@@ -62,11 +57,11 @@ body {
   animation-play-state: paused;
 }
 
-.grad{
+.grad {
   background: linear-gradient(to bottom, #770cff 10%, #c400ff 40%, #c400ff 50%);
 }
 
-.cans{
+.cans {
   height: 250px;
   width: auto;
   padding-top: 10px;
@@ -74,7 +69,7 @@ body {
   padding-right: 20px;
 }
 
-.sect{
+.sect {
   background-image: url(../public/background.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,7 +86,7 @@ input[type="radio"] {
   height: 1.15em;
   border: 0.15em solid currentColor;
   border-radius: 50%;
-  margin:10px;
+  margin: 10px;
   transform: translateY(0.15em);
 }
 
@@ -99,7 +94,7 @@ div::-webkit-scrollbar {
   display: none;
 }
 
-div{
+div {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -120,16 +115,109 @@ select {
   font-size: 25px;
   cursor: pointer;
   width: 55px;
-  transform: translateY(-1px);
-  
+  transform: translateY(5px);
+
 }
 
-.radioLabel{
+.radioLabel {
   margin-left: 10px;
-  transform: translateY(-1px);
+  transform: translateY(5px);
 }
 
-.rectangle-container{
+
+.reserve {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 40px;
+}
+
+.reserveImage {
+  padding-left: 0px;
+  height: 45px;
+}
+
+@media only screen and (min-width: 870px) {
+
+  .reserveImage {
+    padding-left: 15px;
+    height: 55px;
+  }
+
+  .reserve {
+    line-height: 60px;
+  }
+}
+
+.link {
+  margin: 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.link:hover {
+  font-style: italic;
+}
+
+.faq {
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 25px;
+  color: #000;
+  min-width: min-content;
+  min-width: 300px;
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+.faqBottom {
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 25px;
+  color: #000;
+  min-width: min-content;
+  min-width: 300px;
+}
+
+.faqBox {
+  border-radius: 30px;
+  border: 10px solid #b6ff00;
+  background-color: white;
+}
+
+.legalP {
+  text-align: justify;
+}
+
+.infoCard {
+  width: 50vw;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 30px;
+  border: 10px solid #b6ff00;
+  padding: 15px;
+}
+
+.infoField {
+  outline: none;
+  box-shadow: none;
+}
+
+.faqText {
+  color: rgba(0, 0, 0, .3);
+}
+
+.scrollContainer {
+  scroll-snap-type: x mandatory;
+}
+
+.rectangle-container {
   border: 10px solid #b6ff00;
   padding-left: 10px;
   padding-right: 10px;
@@ -141,93 +229,8 @@ select {
   color: #000;
   text-align: left;
   font-size: 25px;
-  flex:none;
+  flex: none;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
-.reserve{
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 40px;
-}
-
-.reserveImage{
-  padding-left: 0px;
-  height: 45px;
-}
-
-@media only screen and (min-width: 870px) {
-
-  .reserveImage {
-      padding-left: 15px;
-      height: 55px;
-    }
-
-  .reserve {
-    line-height: 60px;
-  }
-}
-
- .link {
-   margin: 0;
-   color: #fff;
-   text-decoration: none;
- }
-
- .link:hover {
-   font-style: italic;
- }
-
- .faq{
-  width: 100%;
-  padding-top:25px;
-  padding-bottom:25px;
-  padding-left:25px;
-  padding-right: 25px;
-  font-size: 25px;
-  color:#000;
-  min-width: min-content;
-  min-width:300px;
-  border-bottom: 1px solid rgba(0, 0, 0, .3);
- }
-
- .faqBottom{
-  width: 100%;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
-  font-size: 25px;
-  color: #000;
-  min-width: min-content;
-  min-width: 300px;
- }
-
- .faqBox{
-  border-radius: 30px;
-  border: 10px solid #b6ff00;
-  background-color: white;
- }
-
- .legalP{
-  text-align: justify;
- }
-
- .infoCard{
-  width:50vw;
-  min-width:300px;
-  background-color: white;
-  border-radius:30px;
-  border: 10px solid #b6ff00;
-  padding: 15px;
- }
-
- .infoField{
-  outline: none;
-  box-shadow: none;
- }
-
-.faqText{
-  color:rgba(0, 0, 0, .3);
-}

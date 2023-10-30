@@ -64,69 +64,66 @@ const Home = () => {
 				(or get answers to some frequently asked questions)
 			</a>
 			<form onSubmit={handleSubmit} id="form" className="">
-				<fieldset>
-					<div className="flex items-center w-[100%] overflow-x-auto snap-x snap-mandatory">
-						<label
-							htmlFor="oneCan"
-							className="rectangle-container snap-always snap-center"
-						>
-							<input
-								className="radioButton"
-								required
-								onChange={handleRadioChange}
-								type="radio"
-								id="oneCan"
-								name="amount"
-							/>
-							<label className="radioLabel" htmlFor="oneCan">
-								ONE CAN
-							</label>
+				<fieldset className="">
+					<div className="flex items-center w-[100%] overflow-x-auto scrollContainer px-[20%] md:px-[0%]">
+						<label htmlFor="oneCan" className="rectangle-container">
+							<div className="flex items-center">
+								<input
+									className="radioButton"
+									required
+									onChange={handleRadioChange}
+									type="radio"
+									id="oneCan"
+									name="amount"
+								/>
+								<label className="radioLabel" htmlFor="oneCan">
+									ONE CAN
+								</label>
+							</div>
 							<img className="cans" src="one.png" alt="one can"></img>
 						</label>
-						<label
-							htmlFor="threeCans"
-							className="rectangle-container snap-always snap-center"
-						>
-							<input
-								className="radioButton"
-								required
-								onChange={handleRadioChange}
-								type="radio"
-								id="threeCans"
-								name="amount"
-							/>
-							<label className="radioLabel" htmlFor="threeCans">
-								THREE CANS
-							</label>
+						<label htmlFor="threeCans" className="rectangle-container">
+							<div className="flex items-center">
+								<input
+									className="radioButton"
+									required
+									onChange={handleRadioChange}
+									type="radio"
+									id="threeCans"
+									name="amount"
+								/>
+								<label className="radioLabel" htmlFor="threeCans">
+									THREE CANS
+								</label>
+							</div>
 							<img className="cans" src="three.png" alt="three cans"></img>
 						</label>
-						<label
-							htmlFor="customCans"
-							className="rectangle-container snap-always snap-center"
-						>
-							<input
-								className="radioButton"
-								required
-								onChange={handleRadioChange}
-								type="radio"
-								id="customCans"
-								name="amount"
-							/>
-							<select
-								id="mySelect"
-								value={selectedValue}
-								onChange={handleSelectChange}
-							>
-								<option value="5">5</option>
-								{numbers.map((number: number) => (
-									<option key={number} value={number}>
-										{number}
-									</option>
-								))}
-							</select>
-							<label className="radioLabel" htmlFor="customCans">
-								CANS
-							</label>
+						<label htmlFor="customCans" className="rectangle-container">
+							<div className="flex items-center">
+								<input
+									className="radioButton"
+									required
+									onChange={handleRadioChange}
+									type="radio"
+									id="customCans"
+									name="amount"
+								/>
+								<select
+									id="mySelect"
+									value={selectedValue}
+									onChange={handleSelectChange}
+								>
+									<option value="5">5</option>
+									{numbers.map((number: number) => (
+										<option key={number} value={number}>
+											{number}
+										</option>
+									))}
+								</select>
+								<label className="radioLabel" htmlFor="customCans">
+									CANS
+								</label>
+							</div>
 							<img className="cans" src="silhouette.png" alt="custom"></img>
 						</label>
 					</div>
