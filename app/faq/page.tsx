@@ -72,7 +72,7 @@ const Home = () => {
 					<div className="faqBox">
 						<button onClick={handleOne} className="faq">
 							<div className="flex flex-row">
-								<p className="mr-[10px] text-left">WHAT'S OUR MISSION?</p>
+								<p className="mr-[10px] text-left">WHAT&apos;S OUR MISSION?</p>
 								<svg
 									className={`my-auto ml-auto flex-shrink-0 ${notOne}`}
 									id="svg"
