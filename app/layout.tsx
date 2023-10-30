@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import ScrollingBar from "./components/scrollingBar";
+import ScrollLeft from "./components/scrollLeft";
 
 const figtree = Figtree({
 	weight: "900",
@@ -19,15 +20,17 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
+		<html className="oveflow-hidden max-h-[100vh] max-w-[100vw]" lang="en">
 			<body>
-				<div className="h-screen grad overflow-hidden flex-col justify-center items-center">
-					<ScrollingBar />
-					<div className={`sect h-[calc(100vh-200px)] ${figtree.className}`}>
+				<div className="h-screen grad flex-col justify-center items-center">
+					<div className="bg-darkzestygreen">
+						<ScrollingBar />
+					</div>
+					<div className={`sect h-[calc(100vh-180px)] ${figtree.className}`}>
 						{children}
 					</div>
-					<div className="absolute bottom-0 left-0 right-0">
-						<ScrollingBar />
+					<div className="absolute bottom-0 left-0 right-0 bg-darkzestygreen">
+						<ScrollLeft />
 					</div>
 				</div>
 			</body>

@@ -2,79 +2,124 @@
 "use client";
 import React, { FormEvent, useState } from "react";
 import { Figtree } from "next/font/google";
-import Proceed from "./components/procceed";
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "./firebase";
+import { useRouter } from "next/navigation";
 
 const figtree = Figtree({
 	weight: "900",
 	subsets: ["latin"],
 });
 
-const Home = () => {
-	const [selected, setSelected] = useState(0);
+const figtreeNormal = Figtree({
+	weight: "700",
+	subsets: ["latin"],
+});
 
-	//const handleChange = (event: FormEvent<HTMLFormElement>) => {
-	//console.log(event.target.value);
-	//setSelected(event.target.value);
-	//};
+const Home = () => {
+	const [cans, setCans] = useState(0);
+	const [selectedValue, setSelectedValue] = useState(5);
+	const router = useRouter();
+
+	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		console.log(cans);
+		localStorage.setItem("cans", JSON.stringify(cans));
+		router.push("/info");
+	};
+
+	const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		switch (event.target.id) {
+			case "oneCan":
+				setCans(1);
+				break;
+			case "threeCans":
+				setCans(3);
+				break;
+			case "customCans":
+				setCans(selectedValue);
+				break;
+		}
+	};
+
+	const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+		setSelectedValue(parseInt(event.target.value));
+	};
+
+	const numbers: number[] = [];
+	for (let i = 6; i <= 69; i++) {
+		numbers.push(i);
+	}
 
 	return (
-		<div className="h-[calc(100vh-200px)] flex flex-col items-center justify-center overflow-y-scroll">
-			<div className="flex items-center justify-center mb-[16px]">
-				<h1 className="text-6xl">RESERVE YOUR</h1>
-				<img className="ml-4" src="logo.png" width="380px" height="auto" />
+		<div className="h-[calc(100vh-180px)] flex flex-col items-center justify-center">
+			<div className="flex flex-col md:flex-row items-center">
+				<h1 className="reserve md:text-[60px] text-[40px] text-center">
+					RESERVE YOUR
+				</h1>
+				<img className="reserveImage" src="logo.png" />
 			</div>
-			<form>
+			<a
+				className={`link text-[15px] md:text-[20px] leading-[15px] md:leading-[20px] text-center py-[5px] ${figtreeNormal.className}`}
+				href="/faq"
+			>
+				(or get answers to some frequently asked questions)
+			</a>
+			<form onSubmit={handleSubmit} id="form">
 				<fieldset>
-					<div className="flex items-center justify-center">
-						<div className="border-[6px] inline-block mx-2 rounded-xl border-darkzestygreen text-black bg-white text-xl w-[270px]">
+					<div className="flex items-center justify-center overflow-x-scroll w-[100vw]] h-[100%]">
+						<label htmlFor="oneCan" className="rectangle-container">
 							<input
-								checked={selected === 1}
+								className="radioButton"
+								required
+								onChange={handleRadioChange}
 								type="radio"
 								id="oneCan"
 								name="amount"
-								//onChange={handleChange}
 							/>
-							<label className="text-2xl">ONE CAN</label>
-							<img className="cans mx-auto" src="one.png" alt="one can"></img>
-						</div>
-						<div className="border-[6px] inline-block mx-2 rounded-xl border-darkzestygreen text-black bg-white text-xl w-[270px]">
+							<label className="radioLabel">ONE CAN</label>
+							<img className="cans" src="one.png" alt="one can"></img>
+						</label>
+						<label htmlFor="threeCans" className="rectangle-container">
 							<input
-								checked={selected === 3}
+								className="radioButton"
+								required
+								onChange={handleRadioChange}
 								type="radio"
-								id="twoCans"
+								id="threeCans"
 								name="amount"
-								//onChange={handleChange}
 							/>
-							<label className="text-2xl">THREE CANS</label>
-							<img
-								className="cans mx-auto"
-								src="three.png"
-								alt="three cans"
-							></img>
-						</div>
-						<div className="border-[6px] inline-block mx-2 rounded-xl border-darkzestygreen text-black bg-white text-xl w-[270px]">
+							<label className="radioLabel">THREE CANS</label>
+							<img className="cans" src="three.png" alt="three cans"></img>
+						</label>
+						<label htmlFor="customCans" className="rectangle-container">
 							<input
-								checked={selected === 5}
+								className="radioButton"
+								required
+								onChange={handleRadioChange}
 								type="radio"
 								id="customCans"
 								name="amount"
-								///onChange={handleChange}
 							/>
-							<label className="text-2xl">CUSTOM #</label>
-							<img
-								className="cans mx-auto"
-								src="silhouette.png"
-								alt="custom"
-							></img>
-						</div>
+							<select
+								id="mySelect"
+								value={selectedValue}
+								onChange={handleSelectChange}
+							>
+								<option value="5">5</option>
+								{numbers.map((number: number) => (
+									<option key={number} value={number}>
+										{number}
+									</option>
+								))}
+							</select>
+							<label className="radioLabel">CANS</label>
+							<img className="cans" src="silhouette.png" alt="custom"></img>
+						</label>
 					</div>
 					<div
 						className={`flex items-center justify-center ${figtree.className}`}
 					>
 						<button
-							className="text-3xl bg-black px-[28px] py-[12px] rounded-full mt-[20px]"
+							className="text-3xl bg-black px-[32px] py-[15px] rounded-full"
 							type="submit"
 						>
 							PROCEED

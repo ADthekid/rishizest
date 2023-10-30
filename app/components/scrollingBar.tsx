@@ -11,7 +11,7 @@ function ScrollingBar() {
 		// Function to update the number of repetitions based on viewport width
 		function updateRepetitions() {
 			const viewportWidth = window.innerWidth;
-			let reps = Math.ceil(viewportWidth / 400);
+			let reps = Math.ceil(viewportWidth / 400) + 2;
 			setRepetitions(reps);
 		}
 
@@ -31,15 +31,18 @@ function ScrollingBar() {
 	const textRepetitions = Array(repetitions).fill("INSPIRE YOUR ZEST");
 
 	return (
-		<div className="relative bottom-0 left-0 right-0 h-[100px] bg-darkzestygreen flex items-center justify-start overflow-hidden whitespace-nowrap">
-			<div className={builtTitling.className}>
+		<div className="bottom-0 left-0 right-0 h-[90px] bg-darkzestygreen flex items-center whitespace-nowrap w-[100vw] overflow-hidden">
+			<div className={`marquee-right ${builtTitling.className}`}>
 				{textRepetitions.map((text, index) => (
-					<p className="text-black text-6xl inline-block mx-2 px-0" key={index}>
+					<p
+						className="text-black text-[50px] inline-block mx-2 px-0"
+						key={index}
+					>
 						{text}
 						<img
 							className="inline-block ml-4"
 							src="icon.png"
-							width="50px"
+							width="39px"
 							height="auto"
 						></img>
 					</p>

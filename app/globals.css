@@ -24,38 +24,62 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  user-select: none;
 }
 
-@keyframes scrolling {
-  0% {
-    transform: translateX(-25%);
+@keyframes move-left-to-right {
+  from {
+    transform: translateX(-400px);
   }
 
-  100% {
-    transform: translateX(100%);
+  to {
+    transform: translateX(0);
   }
 }
 
-.animate-scrolling {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scrolling 10s linear infinite;
+@keyframes move-right-to-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-400px);
+  }
+}
+
+.marquee-right {
+  animation: move-left-to-right linear 3s infinite;
+  animation-play-state: running;
+}
+
+.marquee-left {
+  animation: move-right-to-left linear 3s infinite;
+  animation-play-state: running;
+}
+
+.marquee-right:hover,
+.marquee-left:hover {
+  animation-play-state: paused;
 }
 
 .grad{
-  background-image:linear-gradient(#780bff 10%, #c400ff 50%);
+  background: linear-gradient(to bottom, #770cff 10%, #c400ff 40%, #c400ff 50%);
 }
 
 .cans{
-  height: 240px;
+  height: 250px;
   width: auto;
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .sect{
   background-image: url(../public/background.png);
-  background-size: 100vw;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 input[type="radio"] {
@@ -78,4 +102,130 @@ div::-webkit-scrollbar {
 div{
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.radioButton {
+  accent-color: #770cff;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+
+select {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  cursor: pointer;
+  width: 55px;
+  
+}
+
+.radioLabel{
+  margin-left: 10px;
+}
+
+.rectangle-container{
+  border: 10px solid #b6ff00;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 30px 30px 30px 30px;
+  margin: 10px;
+  color: #000;
+  text-align: left;
+  font-size: 25px;
+  flex:none;
+}
+
+.reserve{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 40px;
+}
+
+.reserveImage{
+  padding-left: 0px;
+  height: 35px;
+}
+
+@media only screen and (min-width: 870px) {
+
+  .reserveImage {
+      padding-left: 15px;
+      height: 55px;
+    }
+
+  .reserve {
+    line-height: 60px;
+  }
+}
+
+ .link {
+   margin: 0;
+   color: #fff;
+   text-decoration: none;
+ }
+
+ .link:hover {
+   font-style: italic;
+ }
+
+ .faq{
+  width: 100%;
+  padding-top:25px;
+  padding-bottom:25px;
+  padding-left:25px;
+  padding-right: 25px;
+  font-size: 25px;
+  color:#000;
+  min-width: min-content;
+  min-width:300px;
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
+ }
+
+ .faqBottom{
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 25px;
+  color: #000;
+  min-width: min-content;
+  min-width: 300px;
+ }
+
+ .faqBox{
+  border-radius: 30px;
+  border: 10px solid #b6ff00;
+  background-color: white;
+ }
+
+ .legalP{
+  text-align: justify;
+ }
+
+ .infoCard{
+  width:50vw;
+  min-width:300px;
+  background-color: white;
+  border-radius:30px;
+  border: 10px solid #b6ff00;
+  padding: 15px;
+ }
+
+ .infoField{
+  outline: none;
+  box-shadow: none;
+ }
+
+.faqText{
+  color:rgba(0, 0, 0, .3);
 }
