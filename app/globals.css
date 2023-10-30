@@ -120,11 +120,13 @@ select {
   font-size: 25px;
   cursor: pointer;
   width: 55px;
+  transform: translateY(-1px);
   
 }
 
 .radioLabel{
   margin-left: 10px;
+  transform: translateY(-1px);
 }
 
 .rectangle-container{
@@ -152,7 +154,7 @@ select {
 
 .reserveImage{
   padding-left: 0px;
-  height: 35px;
+  height: 45px;
 }
 
 @media only screen and (min-width: 870px) {

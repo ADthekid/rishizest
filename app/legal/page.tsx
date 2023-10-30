@@ -74,7 +74,7 @@ const Home = () => {
 						consectetur a erat nam at lectus urna. Risus commodo viverra
 						maecenas accumsan lacus. Feugiat nibh sed pulvinar proin gravida.
 					</p>
-					<p className="legalP pb-[2.5vh] indent-[30px]">
+					<p className="legalP pb-[calc(2.5vh+5px)] indent-[30px]">
 						In aliquam sem fringilla ut morbi tincidunt augue interdum. Donec
 						enim diam vulputate ut. Mattis enim ut tellus elementum sagittis
 						vitae et leo duis. Et ligula ullamcorper malesuada proin libero nunc

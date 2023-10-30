@@ -50,9 +50,9 @@ const Home = () => {
 	}
 
 	return (
-		<div className="h-[calc(100vh-180px)] flex flex-col items-center justify-center">
+		<div className="h-[calc(100vh-180px)] flex flex-col items-center justify-center overflow-hidden w-[100%]">
 			<div className="flex flex-col md:flex-row items-center">
-				<h1 className="reserve md:text-[60px] text-[40px] text-center">
+				<h1 className="reserve md:text-[60px] text-[30px] text-center">
 					RESERVE YOUR
 				</h1>
 				<img className="reserveImage" src="logo.png" />
@@ -63,10 +63,13 @@ const Home = () => {
 			>
 				(or get answers to some frequently asked questions)
 			</a>
-			<form onSubmit={handleSubmit} id="form">
+			<form onSubmit={handleSubmit} id="form" className="">
 				<fieldset>
-					<div className="flex items-center justify-center overflow-x-scroll w-[100vw]] h-[100%]">
-						<label htmlFor="oneCan" className="rectangle-container">
+					<div className="flex items-center w-[100%] overflow-x-auto snap-x snap-mandatory">
+						<label
+							htmlFor="oneCan"
+							className="rectangle-container snap-always snap-center"
+						>
 							<input
 								className="radioButton"
 								required
@@ -75,10 +78,15 @@ const Home = () => {
 								id="oneCan"
 								name="amount"
 							/>
-							<label className="radioLabel">ONE CAN</label>
+							<label className="radioLabel" htmlFor="oneCan">
+								ONE CAN
+							</label>
 							<img className="cans" src="one.png" alt="one can"></img>
 						</label>
-						<label htmlFor="threeCans" className="rectangle-container">
+						<label
+							htmlFor="threeCans"
+							className="rectangle-container snap-always snap-center"
+						>
 							<input
 								className="radioButton"
 								required
@@ -87,10 +95,15 @@ const Home = () => {
 								id="threeCans"
 								name="amount"
 							/>
-							<label className="radioLabel">THREE CANS</label>
+							<label className="radioLabel" htmlFor="threeCans">
+								THREE CANS
+							</label>
 							<img className="cans" src="three.png" alt="three cans"></img>
 						</label>
-						<label htmlFor="customCans" className="rectangle-container">
+						<label
+							htmlFor="customCans"
+							className="rectangle-container snap-always snap-center"
+						>
 							<input
 								className="radioButton"
 								required
@@ -111,7 +124,9 @@ const Home = () => {
 									</option>
 								))}
 							</select>
-							<label className="radioLabel">CANS</label>
+							<label className="radioLabel" htmlFor="customCans">
+								CANS
+							</label>
 							<img className="cans" src="silhouette.png" alt="custom"></img>
 						</label>
 					</div>
