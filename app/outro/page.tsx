@@ -23,7 +23,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<div className="flex flex-col min-h-[550px] items-center md:justify-center pt-[7.5vh] md:py-[0px] items-center h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] pb-[7.5vh] overflow-y-scroll">
+			<div className="flex flex-col items-center md:justify-center pt-[7.5vh] md:py-[0px] items-center h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] pb-[7.5vh] overflow-y-scroll">
 				<h1 className="flex text-7xl pb-[4vh] text-center max-w-[75vw]">
 					ORDER PLACED
 				</h1>
