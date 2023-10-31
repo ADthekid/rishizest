@@ -50,7 +50,7 @@ const Home = () => {
 	}
 
 	return (
-		<div className="h-[calc(100vh-180px)] flex flex-col items-center justify-center overflow-hidden w-[100%]">
+		<div className="h-[calc(100vh-180px)] min-h-[550px] flex flex-col items-center justify-center overflow-hidden w-[100%]">
 			<div className="flex flex-col md:flex-row items-center">
 				<h1 className="reserve md:text-[60px] text-[30px] text-center">
 					RESERVE YOUR

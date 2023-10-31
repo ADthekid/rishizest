@@ -11,7 +11,7 @@ function ScrollLeft() {
 		// Function to update the number of repetitions based on viewport width
 		function updateRepetitions() {
 			const viewportWidth = window.innerWidth;
-			let reps = Math.ceil(viewportWidth / 400) + 2;
+			let reps = Math.ceil(viewportWidth / 320) + 2;
 			setRepetitions(reps);
 		}
 

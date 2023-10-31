@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Figtree } from "next/font/google";
 
@@ -12,9 +13,15 @@ const figtreeNormal = Figtree({
 });
 
 const Home = () => {
+	const cans = localStorage.getItem("cans");
+	let amount = 0;
+	if (cans) {
+		amount = parseInt(cans) * 5;
+	}
+
 	return (
 		<div>
-			<div className="flex flex-col md:justify-center pt-[7.5vh] md:py-[0px] items-center h-[calc(100vh-180px)] pb-[7.5vh] overflow-y-scroll">
+			<div className="flex flex-col min-h-[550px] items-center md:justify-center pt-[7.5vh] md:py-[0px] items-center h-[calc(100vh-180px)] pb-[7.5vh] overflow-y-scroll">
 				<h1 className="flex text-7xl pb-[4vh] text-center max-w-[75vw]">
 					ORDER PLACED
 				</h1>
@@ -22,14 +29,19 @@ const Home = () => {
 					className={`md:w-[770px] w-[75vw] text-lg ${figtreeNormal.className}`}
 				>
 					<p className="indent-[30px] text-justify">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices
-						neque ornare aenean euismod elementum. Id diam vel quam elementum.
-						Vitae tempus quam pellentesque nec nam. Nibh nisl condimentum id
-						venenatis a condimentum vitae sapien. Consectetur libero id faucibus
-						nisl tincidunt eget nullam non. Sit amet est placerat in egestas.
-						Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae
-						elementum.
+						Thank you for your order of {cans} cans. You are currently [position
+						+ idk, 50?] in line. An invoice for {amount} dollars will be sent to
+						your email as soon as your order is ready. In the meantime, if you’d
+						like to stay informed about what we’re up to, make sure to find us
+						on Instagram{" "}
+						<a
+							href="https://www.instagram.com/rishizest/"
+							target="new"
+							className="link"
+						>
+							@rishizest
+						</a>
+						.
 					</p>
 				</div>
 				<div

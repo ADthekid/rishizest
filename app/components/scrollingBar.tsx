@@ -11,7 +11,7 @@ function ScrollingBar() {
 		// Function to update the number of repetitions based on viewport width
 		function updateRepetitions() {
 			const viewportWidth = window.innerWidth;
-			let reps = Math.ceil(viewportWidth / 400) + 2;
+			let reps = Math.ceil(viewportWidth / 320) + 2;
 			setRepetitions(reps);
 		}
 
@@ -39,12 +39,7 @@ function ScrollingBar() {
 						key={index}
 					>
 						{text}
-						<img
-							className="inline-block ml-4"
-							src="icon.png"
-							width="39px"
-							height="auto"
-						></img>
+						<img className="bannerLogo inline-block ml-4" src="icon.png"></img>
 					</p>
 				))}
 			</div>

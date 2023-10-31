@@ -52,7 +52,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<div className="flex flex-col items-center h-[calc(100vh-180px)] overflow-y-scroll">
+			<div className="flex flex-col items-center min-h-[550px] h-[calc(100vh-180px)] overflow-y-scroll">
 				<h1 className="flex text-7xl pt-[7.5vh] pb-[5vh] text-center max-w-[75vw]">
 					ADD SOME INFO
 				</h1>

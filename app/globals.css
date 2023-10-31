@@ -148,6 +148,9 @@ select {
   .reserve {
     line-height: 60px;
   }
+  .bannerLogo {
+    width: 39px;
+  }
 }
 
 .link {
@@ -232,5 +235,10 @@ select {
   flex: none;
   scroll-snap-align: center;
   scroll-snap-stop: always;
+}
+
+.bannerLogo{
+  width:39px;
+  height:auto;
 }
 
