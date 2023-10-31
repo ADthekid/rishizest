@@ -100,7 +100,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<div className="flex flex-col items-center min-h-[550px] h-[calc(100vh-180px)] overflow-y-scroll">
+			<div className="flex flex-col items-center min-h-[550px] h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] overflow-y-scroll">
 				<h1 className="flex text-7xl pt-[7.5vh] pb-[4vh] text-center">FAQS</h1>
 				<div
 					className={`md:w-[770px] w-[75vw] min-w-[320px] pb-[calc(90px+7.5vh)] ${figtreeNormal.className}`}
@@ -452,19 +452,19 @@ const Home = () => {
 						</button>
 					</div>
 				</div>
-			</div>
-			<div className="fixed bottom-[calc(100px+7.5vh)] left-0 right-0 z-10">
-				<div
-					className={`flex items-center justify-center ${figtreeBold.className}`}
-				>
-					<a href="/">
-						<button
-							className="text-3xl bg-black px-[32px] py-[15px] rounded-full mt-[20px]"
-							type="submit"
-						>
-							RESERVE
-						</button>
-					</a>
+				<div className="relative bottom-[calc(100px+7.5vh)] left-0 right-0 z-10">
+					<div
+						className={`flex items-center justify-center ${figtreeBold.className}`}
+					>
+						<a href="/">
+							<button
+								className="text-3xl bg-black px-[32px] py-[15px] rounded-full mt-[20px]"
+								type="submit"
+							>
+								RESERVE
+							</button>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

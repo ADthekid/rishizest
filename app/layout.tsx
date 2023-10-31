@@ -30,7 +30,7 @@ export default function RootLayout({
 						<ScrollingBar />
 					</div>
 					<div
-						className={`sect min-h-[550px] h-[calc(100vh-180px)] ${figtree.className}`}
+						className={`sect min-h-[550px] h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] ${figtree.className}`}
 					>
 						{children}
 					</div>

@@ -14,7 +14,7 @@ const figtreeNormal = Figtree({
 const Home = () => {
 	return (
 		<div>
-			<div className="flex flex-col items-center min-h-[550px] h-[calc(100vh-180px)] overflow-y-scroll pb-[2px]">
+			<div className="flex flex-col items-center min-h-[550px] h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] overflow-y-scroll pb-[2px]">
 				<h1 className="flex text-7xl pt-[7.5vh] pb-[4vh] text-center max-w-[75vw] ">
 					LEGAL STUFF
 				</h1>
@@ -83,7 +83,7 @@ const Home = () => {
 					</p>
 				</div>
 			</div>
-			<div className="fixed bottom-[calc(100px+7.5vh)] left-0 right-0 z-10">
+			<div className="fixed bottom-[calc(70px+7.5vh)] left-0 right-0 z-10">
 				<div
 					className={`flex items-center justify-center ${figtreeBold.className}`}
 				>
