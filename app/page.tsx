@@ -1,6 +1,6 @@
 // pages/index.js
 "use client";
-import React, { FormEvent, useState } from "react";
+import React, { FormEvent, useState, useEffect } from "react";
 import { Figtree } from "next/font/google";
 import { useRouter } from "next/navigation";
 
@@ -49,18 +49,20 @@ const Home = () => {
 		numbers.push(i);
 	}
 
-	const container: HTMLElement | null =
-		document.querySelector(".scrollContainer");
-	const middleColumn: HTMLElement | null = document.querySelector(
-		".rectangle-container:nth-child(2"
-	);
+	useEffect(() => {
+		const container: HTMLElement | null =
+			document.querySelector(".scrollContainer");
+		const middleColumn: HTMLElement | null = document.querySelector(
+			".rectangle-container:nth-child(2)"
+		);
 
-	if (container && middleColumn) {
-		container.scrollLeft =
-			middleColumn.offsetLeft -
-			container.clientWidth / 2 +
-			middleColumn.clientWidth / 2;
-	}
+		if (container && middleColumn) {
+			container.scrollLeft =
+				middleColumn.offsetLeft -
+				container.clientWidth / 2 +
+				middleColumn.clientWidth / 2;
+		}
+	}, []);
 
 	return (
 		<div className="h-[calc(100vh-180px)] min-h-[550px] flex flex-col items-center justify-center overflow-hidden w-[100%]">
