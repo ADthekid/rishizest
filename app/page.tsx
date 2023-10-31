@@ -49,6 +49,19 @@ const Home = () => {
 		numbers.push(i);
 	}
 
+	const container: HTMLElement | null =
+		document.querySelector(".scrollContainer");
+	const middleColumn: HTMLElement | null = document.querySelector(
+		".rectangle-container:nth-child(2"
+	);
+
+	if (container && middleColumn) {
+		container.scrollLeft =
+			middleColumn.offsetLeft -
+			container.clientWidth / 2 +
+			middleColumn.clientWidth / 2;
+	}
+
 	return (
 		<div className="h-[calc(100vh-180px)] min-h-[550px] flex flex-col items-center justify-center overflow-hidden w-[100%]">
 			<div className="flex flex-col md:flex-row items-center">

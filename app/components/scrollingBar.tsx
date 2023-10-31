@@ -11,7 +11,7 @@ function ScrollingBar() {
 		// Function to update the number of repetitions based on viewport width
 		function updateRepetitions() {
 			const viewportWidth = window.innerWidth;
-			let reps = Math.ceil(viewportWidth / 320) + 4;
+			let reps = Math.ceil(viewportWidth / 200) + 4;
 			setRepetitions(reps);
 		}
 
