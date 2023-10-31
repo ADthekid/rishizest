@@ -13,11 +13,13 @@ const figtreeNormal = Figtree({
 });
 
 const Home = () => {
-	const cans = localStorage.getItem("cans");
+	const cans = 5;
+	const amount = 25;
+	/*const cans = localStorage.getItem("cans");
 	let amount = 0;
 	if (cans) {
 		amount = parseInt(cans) * 5;
-	}
+	}*/
 
 	return (
 		<div>
