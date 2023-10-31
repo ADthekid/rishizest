@@ -139,7 +139,7 @@ const Home = () => {
 						</div>
 					</form>
 				</div>
-				<div className="sm:hidden block bottom-0 left-0 right-0 bg-darkzestygreen">
+				<div className="sm:hidden block bg-darkzestygreen">
 					<ScrollLeft />
 				</div>
 			</div>
