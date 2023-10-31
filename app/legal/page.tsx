@@ -30,9 +30,9 @@ const Home = () => {
 					</p>
 					<p className="legalP pb-[.5vh] indent-[30px]">
 						RishiZest refers to the preorder as a reservation for the purchase
-						of its product. It's important to note that placing a preorder does
-						not create a legal obligation to purchase the product. However, upon
-						product readiness, RishiZest will issue an invoice for the
+						of its product. It&apos;s important to note that placing a preorder
+						does not create a legal obligation to purchase the product. However,
+						upon product readiness, RishiZest will issue an invoice for the
 						appropriate amount to the customer.
 					</p>
 					<p className="legalP pb-[.5vh] indent-[30px]">
@@ -53,21 +53,21 @@ const Home = () => {
 						marketing materials.
 					</p>
 					<p className="legalP pb-[.5vh] indent-[30px]">
-						The following assets used within RishiZest's marketing materials are
-						attributed as follows:
+						The following assets used within RishiZest&apos;s marketing
+						materials are attributed as follows:
 					</p>
 					<ul>
 						<li>
-							• "Built Titling" is the property of Typodermic Fonts and is
-							available for personal use.
+							• &quot;Built Titling&quot; is the property of Typodermic Fonts
+							and is available for personal use.
 						</li>
 						<li>
-							• "Solvast" is the property of Solvstud and is available for
-							personal use.
+							• &quot;Solvast&quot; is the property of Solvstud and is available
+							for personal use.
 						</li>
 						<li>
-							• "Akira Expanded" is the property of Typologic and is available
-							for commercial use.
+							• &quot;Akira Expanded&quot; is the property of Typologic and is
+							available for commercial use.
 						</li>
 						<li>
 							• All raw asset templates are the property of GraphicsFuel and are
