@@ -25,11 +25,11 @@ export default function RootLayout({
 			lang="en"
 		>
 			<body>
-				<div className="h-screen grad flex-col justify-center items-center">
+				<div className="h-100% grad flex-col justify-center items-center">
 					<div className="bg-darkzestygreen">
 						<ScrollingBar />
 					</div>
-					<div className={`sect h-[calc(100vh-180px)] ${figtree.className}`}>
+					<div className={`sect h-[calc(100%-180px)] ${figtree.className}`}>
 						{children}
 					</div>
 					<div className="absolute bottom-0 left-0 right-0 bg-darkzestygreen">
