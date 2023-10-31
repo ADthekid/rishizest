@@ -20,7 +20,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html className="oveflow-hidden max-h-[100vh] max-w-[100vw]" lang="en">
+		<html
+			className="oveflow-hidden h-[100vh] max-w-[100vw] min-h-[770px]"
+			lang="en"
+		>
 			<body>
 				<div className="h-screen grad flex-col justify-center items-center">
 					<div className="bg-darkzestygreen">
