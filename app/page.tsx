@@ -76,7 +76,7 @@ const Home = () => {
 			>
 				<div className="grad">
 					<div className="sect">
-						<div className="h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] max-w-[100vw] flex flex-col items-center justify-center overflow-hidden w-[100%]">
+						<div className="h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] flex flex-col items-center justify-center overflow-hidden">
 							<div className="flex flex-col md:flex-row items-center">
 								<h1 className="reserve md:text-[60px] text-[30px] text-center">
 									RESERVE YOUR
@@ -91,7 +91,7 @@ const Home = () => {
 							</a>
 							<form onSubmit={handleSubmit} id="form">
 								<fieldset>
-									<div className="flex w-[100%] overflow-x-auto scrollContainer px-[0%]">
+									<div className="flex w-[100%] overflow-x-auto scrollContainer">
 										<label
 											htmlFor="oneCan"
 											className="rectangle-container left"
