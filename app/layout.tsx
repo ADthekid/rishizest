@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
+import Head from "next/head";
 import ScrollingBar from "./components/scrollingBar";
 import ScrollLeft from "./components/scrollLeft";
 
@@ -24,12 +25,12 @@ export default function RootLayout({
 			className="oveflow-y-auto oveflow-x-hidden max-h-[100dvh] max-w-[100vw]"
 			lang="en"
 		>
-			<head>
+			<Head>
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1"
 				></meta>
-			</head>
+			</Head>
 			<body>{children}</body>
 		</html>
 	);
