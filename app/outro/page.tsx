@@ -47,7 +47,7 @@ const Home = () => {
 					</p>
 				</div>
 				<div
-					className={`flex items-center justify-center ${figtreeBold.className}`}
+					className={`flex items-center justify-center mb-[7.5dvh] ${figtreeBold.className}`}
 				>
 					<a href="/">
 						<button
