@@ -120,7 +120,9 @@ const Home = () => {
 								<div className="faqBox">
 									<button onClick={handleOne} className="faq">
 										<div className="flex flex-row">
-											<p className="mr-[10px] text-left">WHAT IS RISHIZEST?</p>
+											<p className="mr-[10px] text-left text-white">
+												WHAT IS RISHIZEST?
+											</p>
 											<svg
 												className={`my-auto ml-auto flex-shrink-0 ${notOne}`}
 												id="svg"
@@ -486,7 +488,7 @@ const Home = () => {
 								>
 									<a href="/">
 										<button
-											className="text-3xl bg-black px-[32px] py-[15px] rounded-full mt-[20px]"
+											className="text-3xl bg-black px-[32px] py-[15px] rounded-full mt-[20px]  text-white"
 											type="submit"
 										>
 											RESERVE

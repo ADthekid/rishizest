@@ -24,7 +24,7 @@ const Home = () => {
 			>
 				<div className="sect">
 					<div className="flex flex-col items-center h-[calc(100dvh-140px)] md:h-[calc(100dvh-180px)] overflow-y-scroll">
-						<h1 className="flex text-7xl pt-[7.5dvh] pb-[4dvh] text-center max-w-[75vw] ">
+						<h1 className="flex text-7xl pt-[7.5dvh] pb-[4dvh] text-center max-w-[75vw] text-white">
 							LEGAL STUFF
 						</h1>
 						<div
@@ -87,7 +87,7 @@ const Home = () => {
 						>
 							<a href="/outro">
 								<button
-									className="text-3xl bg-black px-[32px] py-[15px] rounded-full mt-[20px]"
+									className="text-3xl bg-black px-[32px] py-[15px] rounded-full mt-[20px] text-white"
 									type="submit"
 								>
 									PROCEED

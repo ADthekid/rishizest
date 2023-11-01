@@ -78,7 +78,7 @@ const Home = () => {
 					<div className="sect">
 						<div className="h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] flex flex-col items-center justify-center overflow-hidden">
 							<div className="flex flex-col md:flex-row items-center">
-								<h1 className="reserve md:text-[60px] text-[30px] text-center">
+								<h1 className="reserve md:text-[60px] text-[30px] text-center text-white">
 									RESERVE YOUR
 								</h1>
 								<img className="reserveImage" src="logo.png" />
@@ -174,7 +174,7 @@ const Home = () => {
 										className={`flex items-center justify-center ${figtree.className}`}
 									>
 										<button
-											className="text-3xl bg-black px-[32px] py-[15px] rounded-full"
+											className="text-3xl bg-black px-[32px] py-[15px] rounded-full text-white"
 											type="submit"
 										>
 											PROCEED

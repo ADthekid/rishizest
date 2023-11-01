@@ -33,7 +33,7 @@ const Home = () => {
 			>
 				<div className="sect">
 					<div className="flex flex-col items-center md:justify-center pt-[7.5vh] md:py-[0px] items-center h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] pb-[7.5vh] overflow-y-scroll">
-						<h1 className="flex text-7xl pb-[4vh] text-center max-w-[75vw]">
+						<h1 className="flex text-7xl pb-[4vh] text-center max-w-[75vw] text-white">
 							ORDER PLACED
 						</h1>
 						<div
@@ -60,7 +60,7 @@ const Home = () => {
 						>
 							<a href="/">
 								<button
-									className="text-3xl bg-black px-[32px] py-[15px] rounded-full mt-[15px]"
+									className="text-3xl bg-black px-[32px] py-[15px] rounded-full mt-[15px] text-white"
 									type="submit"
 								>
 									DONE
