@@ -72,10 +72,10 @@ const Home = () => {
 				<ScrollingBar />
 			</div>
 			<div
-				className={`grad h-[calc(100dvh)] sm:h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] ${figtree.className}`}
+				className={`h-[calc(100dvh)] sm:h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] ${figtree.className}`}
 			>
-				<div className="sect">
-					<div>
+				<div className="grad">
+					<div className="sect">
 						<div className="h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] max-w-[100vw] flex flex-col items-center justify-center overflow-hidden w-[100%]">
 							<div className="flex flex-col md:flex-row items-center">
 								<h1 className="reserve md:text-[60px] text-[30px] text-center">
@@ -179,6 +179,9 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
+			</div>
+			<div className="sm:block hidden fixed bottom-0 left-0 right-0 bg-darkzestygreen">
+				<ScrollLeft />
 			</div>
 		</div>
 	);
