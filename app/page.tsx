@@ -91,7 +91,7 @@ const Home = () => {
 							</a>
 							<form onSubmit={handleSubmit} id="form">
 								<fieldset className="flex flex-col items-center">
-									<div className="flex w-[60%] md:w-[100%] overflow-x-auto scrollContainer">
+									<div className="flex w-[100vw] md:w-[100%] overflow-x-auto scrollContainer">
 										<label
 											htmlFor="oneCan"
 											className="rectangle-container left"
