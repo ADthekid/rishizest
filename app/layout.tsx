@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html
-			className="oveflow-y-auto oveflow-x-hidden max-h-[calc(100vh-6rem)] sm:max-h-[100vh] max-w-[100vw]"
+			className="oveflow-y-auto oveflow-x-hidden max-h-[100dvh] max-w-[100vw]"
 			lang="en"
 		>
 			<body>
@@ -30,11 +30,11 @@ export default function RootLayout({
 						<ScrollingBar />
 					</div>
 					<div
-						className={`sect h-[calc(100vh-70px)] sm:h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] ${figtree.className}`}
+						className={`sect h-[calc(100dvh-140px)] sm:h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] ${figtree.className}`}
 					>
 						{children}
 					</div>
-					<div className="translate-y-[-140px] sm:translate-y-[0px] block bottom-0 left-0 right-0 bg-darkzestygreen">
+					<div className="block fixed bottom-0 left-0 right-0 bg-darkzestygreen">
 						<ScrollLeft />
 					</div>
 				</div>
