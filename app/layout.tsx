@@ -25,7 +25,7 @@ export default function RootLayout({
 			lang="en"
 		>
 			<body>
-				<div className="min-h-screen grad flex-col justify-center items-center">
+				<div className="h-screen grad flex-col justify-center items-center">
 					<div className="flxed bg-darkzestygreen">
 						<ScrollingBar />
 					</div>
