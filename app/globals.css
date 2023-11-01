@@ -67,12 +67,125 @@ body::-webkit-scrollbar {
   background: linear-gradient(to bottom, #770cff 10%, #c400ff 40%, #c400ff 50%);
 }
 
+.rectangle-container {
+  border: 1.25vh solid #b6ff00;
+  padding-left: 1.25vh;
+  padding-right: 1.25vh;
+  padding-bottom: 1.25vh;
+  margin: 1.25vh;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 3.75vh 3.75vh 3.75vh 3.75vh;
+  color: #000;
+  text-align: left;
+  font-size: 3.125vh;
+  flex: none;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
 .cans {
-  height: 250px;
   width: auto;
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  height: 31.25vh;
+  padding-top: 1.25vh;
+  padding-left: 2.5vh;
+  padding-right: 2.5vh;
+}
+
+.radioLabel {
+  margin-left: 0.0125vh;
+  transform: translateY(0.625vh);
+}
+
+select {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  font-size: 3.125vh;
+  cursor: pointer;
+  width: 6.875vh;
+  transform: translateY(0.625vh);
+}
+
+.reserve {
+  line-height: 40px;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reserveImage {
+  padding-left: 0px;
+  height: 45px;
+}
+
+@media only screen and (min-height: 700px){
+  .cans {
+      width: auto;
+      height: 250px;
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .radioLabel {
+      margin-left: 10px;
+      transform: translateY(5px);
+    }
+
+    .rectangle-container {
+      border: 10px solid #b6ff00;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      margin: 10px;
+      display: inline-block;
+      background-color: #fff;
+      border-radius: 30px 30px 30px 30px;
+      color: #000;
+      text-align: left;
+      font-size: 25px;
+      flex: none;
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+    }
+
+    select {
+      outline: none;
+      border: none;
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+      font-size: 25px;
+      cursor: pointer;
+      width: 55px;
+      transform: translateY(5px);
+    }
+}
+
+@media only screen and (min-width: 870px) {
+
+  .reserveImage {
+    padding-left: 15px;
+    height: 55px;
+  }
+
+  .reserve {
+    line-height: 60px;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+  }
+
+  .bannerLogo {
+    width: 39px;
+  }
 }
 
 .sect {
@@ -110,53 +223,6 @@ div {
   width: 2em;
   height: 2em;
   border-radius: 50%;
-}
-
-select {
-  outline: none;
-  border: none;
-  box-shadow: none;
-  margin: 0;
-  padding: 0;
-  font-size: 25px;
-  cursor: pointer;
-  width: 55px;
-  transform: translateY(5px);
-
-}
-
-.radioLabel {
-  margin-left: 10px;
-  transform: translateY(5px);
-}
-
-
-.reserve {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 40px;
-}
-
-.reserveImage {
-  padding-left: 0px;
-  height: 45px;
-}
-
-@media only screen and (min-width: 870px) {
-
-  .reserveImage {
-    padding-left: 15px;
-    height: 55px;
-  }
-
-  .reserve {
-    line-height: 60px;
-  }
-  .bannerLogo {
-    width: 39px;
-  }
 }
 
 .link {
@@ -224,23 +290,6 @@ select {
 
 .scrollContainer {
   scroll-snap-type: x mandatory;
-}
-
-.rectangle-container {
-  border: 10px solid #b6ff00;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  margin: 10px;
-  display: inline-block;
-  background-color: #fff;
-  border-radius: 30px 30px 30px 30px;
-  color: #000;
-  text-align: left;
-  font-size: 25px;
-  flex: none;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
 }
 
 .bannerLogo{

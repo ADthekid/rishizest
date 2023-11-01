@@ -72,15 +72,13 @@ const Home = () => {
 				<ScrollingBar />
 			</div>
 			<div
-				className={`h-[calc(100dvh)] sm:h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] ${figtree.className}`}
+				className={`h-[calc(100dvh-140px)] md:h-[calc(100dvh-180px)] sm:h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] ${figtree.className}`}
 			>
 				<div className="grad">
 					<div className="sect">
 						<div className="h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] flex flex-col items-center justify-center overflow-hidden">
 							<div className="flex flex-col md:flex-row items-center">
-								<h1 className="reserve md:text-[60px] text-[30px] text-center text-white">
-									RESERVE YOUR
-								</h1>
+								<h1 className="reserve">RESERVE YOUR</h1>
 								<img className="reserveImage" src="logo.png" />
 							</div>
 							<a
@@ -91,7 +89,7 @@ const Home = () => {
 							</a>
 							<form onSubmit={handleSubmit} id="form">
 								<fieldset className="flex flex-col items-center">
-									<div className="flex w-[100vw] md:w-[100%] overflow-x-auto scrollContainer">
+									<div className="flex w-[100vw] sm:w-[100%] overflow-x-auto scrollContainer">
 										<label
 											htmlFor="oneCan"
 											className="rectangle-container left"
@@ -183,13 +181,10 @@ const Home = () => {
 								</fieldset>
 							</form>
 						</div>
-						<div className="sm:hidden block bg-darkzestygreen">
-							<ScrollLeft />
-						</div>
 					</div>
 				</div>
 			</div>
-			<div className="sm:block hidden fixed bottom-0 left-0 right-0 bg-darkzestygreen">
+			<div className="fixed bottom-0 left-0 right-0 bg-darkzestygreen">
 				<ScrollLeft />
 			</div>
 		</div>
