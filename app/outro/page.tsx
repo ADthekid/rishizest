@@ -29,7 +29,7 @@ const Home = () => {
 				<ScrollingBar />
 			</div>
 			<div
-				className={`sect h-[calc(100dvh-140px)] sm:h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] ${figtreeBold.className}`}
+				className={`sect h-[calc(100dvh)] sm:h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] ${figtreeBold.className}`}
 			>
 				<div>
 					<div className="flex flex-col items-center md:justify-center pt-[7.5vh] md:py-[0px] items-center h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] pb-[7.5vh] overflow-y-scroll">
