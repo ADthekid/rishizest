@@ -3,6 +3,7 @@
 import React, { FormEvent, useState, useEffect } from "react";
 import { Figtree } from "next/font/google";
 import { useRouter } from "next/navigation";
+import ScrollLeft from "./components/scrollLeft";
 
 const figtree = Figtree({
 	weight: "900",
@@ -65,95 +66,100 @@ const Home = () => {
 	}, []);
 
 	return (
-		<div className="h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] max-w-[100vw] flex flex-col items-center justify-center overflow-hidden w-[100%]">
-			<div className="flex flex-col md:flex-row items-center">
-				<h1 className="reserve md:text-[60px] text-[30px] text-center">
-					RESERVE YOUR
-				</h1>
-				<img className="reserveImage" src="logo.png" />
-			</div>
-			<a
-				className={`link text-[15px] md:text-[20px] leading-[15px] md:leading-[20px] text-center py-[5px] ${figtreeNormal.className}`}
-				href="/faq"
-			>
-				(or get answers to some frequently asked questions)
-			</a>
-			<form onSubmit={handleSubmit} id="form" className="max-w-[50vw]">
-				<fieldset className="">
-					<div className="flex items-center w-[100%] overflow-x-auto scrollContainer px-[20%] md:px-[0%]">
-						<label htmlFor="oneCan" className="rectangle-container">
-							<div className="flex items-center">
-								<input
-									className="radioButton"
-									required
-									onChange={handleRadioChange}
-									type="radio"
-									id="oneCan"
-									name="amount"
-								/>
-								<label className="radioLabel" htmlFor="oneCan">
-									ONE CAN
-								</label>
-							</div>
-							<img className="cans" src="one.png" alt="one can"></img>
-						</label>
-						<label htmlFor="threeCans" className="rectangle-container">
-							<div className="flex items-center">
-								<input
-									className="radioButton"
-									required
-									onChange={handleRadioChange}
-									type="radio"
-									id="threeCans"
-									name="amount"
-								/>
-								<label className="radioLabel" htmlFor="threeCans">
-									THREE CANS
-								</label>
-							</div>
-							<img className="cans" src="three.png" alt="three cans"></img>
-						</label>
-						<label htmlFor="customCans" className="rectangle-container">
-							<div className="flex items-center">
-								<input
-									className="radioButton"
-									required
-									onChange={handleRadioChange}
-									type="radio"
-									id="customCans"
-									name="amount"
-								/>
-								<select
-									id="mySelect"
-									value={selectedValue}
-									onChange={handleSelectChange}
-								>
-									<option value="5">5</option>
-									{numbers.map((number: number) => (
-										<option key={number} value={number}>
-											{number}
-										</option>
-									))}
-								</select>
-								<label className="radioLabel" htmlFor="customCans">
-									CANS
-								</label>
-							</div>
-							<img className="cans" src="silhouette.png" alt="custom"></img>
-						</label>
-					</div>
-					<div
-						className={`flex items-center justify-center ${figtree.className}`}
-					>
-						<button
-							className="text-3xl bg-black px-[32px] py-[15px] rounded-full"
-							type="submit"
+		<div>
+			<div className="h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] max-w-[100vw] flex flex-col items-center justify-center overflow-hidden w-[100%]">
+				<div className="flex flex-col md:flex-row items-center">
+					<h1 className="reserve md:text-[60px] text-[30px] text-center">
+						RESERVE YOUR
+					</h1>
+					<img className="reserveImage" src="logo.png" />
+				</div>
+				<a
+					className={`link text-[15px] md:text-[20px] leading-[15px] md:leading-[20px] text-center py-[5px] ${figtreeNormal.className}`}
+					href="/faq"
+				>
+					(or get answers to some frequently asked questions)
+				</a>
+				<form onSubmit={handleSubmit} id="form" className="">
+					<fieldset className="">
+						<div className="flex items-center w-[100%] overflow-x-auto scrollContainer px-[20%] md:px-[0%]">
+							<label htmlFor="oneCan" className="rectangle-container">
+								<div className="flex items-center">
+									<input
+										className="radioButton"
+										required
+										onChange={handleRadioChange}
+										type="radio"
+										id="oneCan"
+										name="amount"
+									/>
+									<label className="radioLabel" htmlFor="oneCan">
+										ONE CAN
+									</label>
+								</div>
+								<img className="cans" src="one.png" alt="one can"></img>
+							</label>
+							<label htmlFor="threeCans" className="rectangle-container">
+								<div className="flex items-center">
+									<input
+										className="radioButton"
+										required
+										onChange={handleRadioChange}
+										type="radio"
+										id="threeCans"
+										name="amount"
+									/>
+									<label className="radioLabel" htmlFor="threeCans">
+										THREE CANS
+									</label>
+								</div>
+								<img className="cans" src="three.png" alt="three cans"></img>
+							</label>
+							<label htmlFor="customCans" className="rectangle-container">
+								<div className="flex items-center">
+									<input
+										className="radioButton"
+										required
+										onChange={handleRadioChange}
+										type="radio"
+										id="customCans"
+										name="amount"
+									/>
+									<select
+										id="mySelect"
+										value={selectedValue}
+										onChange={handleSelectChange}
+									>
+										<option value="5">5</option>
+										{numbers.map((number: number) => (
+											<option key={number} value={number}>
+												{number}
+											</option>
+										))}
+									</select>
+									<label className="radioLabel" htmlFor="customCans">
+										CANS
+									</label>
+								</div>
+								<img className="cans" src="silhouette.png" alt="custom"></img>
+							</label>
+						</div>
+						<div
+							className={`flex items-center justify-center ${figtree.className}`}
 						>
-							PROCEED
-						</button>
-					</div>
-				</fieldset>
-			</form>
+							<button
+								className="text-3xl bg-black px-[32px] py-[15px] rounded-full"
+								type="submit"
+							>
+								PROCEED
+							</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<div className="sm:hidden block bg-darkzestygreen">
+				<ScrollLeft />
+			</div>
 		</div>
 	);
 };
