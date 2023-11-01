@@ -35,11 +35,11 @@ const Home = () => {
 						+ idk, 50?] in line. An invoice for {amount} dollars will be sent to
 						your email as soon as your order is ready. In the meantime, if
 						you&apos;d like to stay informed about what we&apos;re up to, make
-						sure to find us on Instagram.
+						sure to find us on Instagram&nbsp;
 						<a
 							href="https://www.instagram.com/rishizest/"
 							target="new"
-							className="link"
+							className="social link"
 						>
 							@rishizest
 						</a>

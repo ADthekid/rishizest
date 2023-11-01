@@ -100,10 +100,12 @@ const Home = () => {
 
 	return (
 		<div>
-			<div className="flex flex-col items-center h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] overflow-y-scroll">
-				<h1 className="flex text-7xl pt-[7.5vh] pb-[4vh] text-center">FAQS</h1>
+			<div className="flex flex-col items-center h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] overflow-y-scroll">
+				<h1 className="flex text-7xl pt-[7.5dvh] pb-[4dvh] text-center">
+					FAQS
+				</h1>
 				<div
-					className={`md:w-[770px] w-[75vw] min-w-[320px] pb-[calc(90px+7.5vh)] ${figtreeNormal.className}`}
+					className={`md:w-[770px] w-[75vw] min-w-[320px] pb-[calc(90px+7.5dvh)] ${figtreeNormal.className}`}
 				>
 					<div className="faqBox">
 						<button onClick={handleOne} className="faq">
@@ -452,7 +454,7 @@ const Home = () => {
 						</button>
 					</div>
 				</div>
-				<div className="relative bottom-[calc(100px+7.5vh)] left-0 right-0 z-10">
+				<div className="relative bottom-[calc(70px+7.5vh)] sm:bottom-[calc(90px+7.5vh)] left-0 right-0 z-10">
 					<div
 						className={`flex items-center justify-center ${figtreeBold.className}`}
 					>

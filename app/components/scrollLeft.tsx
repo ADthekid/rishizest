@@ -31,7 +31,7 @@ function ScrollLeft() {
 	const textRepetitions = Array(repetitions).fill("INSPIRE YOUR ZEST");
 
 	return (
-		<div className="bottom-0 left-0 right-0 h-[70px] md:h-[90px] bg-darkzestygreen flex items-center whitespace-nowrap w-[100vw] overflow-hidden">
+		<div className="z-20 bottom-0 left-0 right-0 h-[70px] md:h-[90px] bg-darkzestygreen flex items-center whitespace-nowrap w-[100vw] overflow-hidden">
 			<div className={`marquee-left ${builtTitling.className}`}>
 				{textRepetitions.map((text, index) => (
 					<p
