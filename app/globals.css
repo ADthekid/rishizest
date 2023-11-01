@@ -20,6 +20,12 @@ body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient (to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   user-select: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 @keyframes move-left-to-right {
@@ -244,4 +250,3 @@ select {
 .social{
   color: #b6ff00;
 }
-
