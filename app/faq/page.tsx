@@ -115,7 +115,7 @@ const Home = () => {
 								FAQ
 							</h1>
 							<div
-								className={`md:w-[770px] w-[75vw] min-w-[320px] pb-[calc(90px+7.5dvh)] ${figtreeNormal.className}`}
+								className={`md:w-[770px] w-[75vw] min-w-[320px] pb-[calc(7.5dvh)] ${figtreeNormal.className}`}
 							>
 								<div className="faqBox">
 									<button onClick={handleOne} className="faq">
@@ -480,7 +480,7 @@ const Home = () => {
 									</button>
 								</div>
 							</div>
-							<div className="relative bottom-[calc(70px+7.5vh)] sm:bottom-[calc(90px+7.5vh)] left-0 right-0 z-10">
+							<div className="relative bottom-[calc(7.55dvh)] sm:bottom-[calc(7.5dvh)] left-0 right-0 z-10">
 								<div
 									className={`flex items-center justify-center ${figtreeBold.className}`}
 								>
