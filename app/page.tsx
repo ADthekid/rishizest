@@ -180,9 +180,6 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			<div className="sm:block hidden fixed bottom-0 left-0 right-0 bg-darkzestygreen">
-				<ScrollLeft />
-			</div>
 		</div>
 	);
 };
