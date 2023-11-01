@@ -78,7 +78,7 @@ const Home = () => {
 			>
 				(or get answers to some frequently asked questions)
 			</a>
-			<form onSubmit={handleSubmit} id="form" className="max-w-[100vw]">
+			<form onSubmit={handleSubmit} id="form" className="max-w-[50vw]">
 				<fieldset className="">
 					<div className="flex items-center w-[100%] overflow-x-auto scrollContainer px-[20%] md:px-[0%]">
 						<label htmlFor="oneCan" className="rectangle-container">
