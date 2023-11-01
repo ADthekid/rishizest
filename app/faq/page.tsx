@@ -111,7 +111,7 @@ const Home = () => {
 				<div className="sect">
 					<div>
 						<div className="flex flex-col items-center h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] overflow-y-scroll">
-							<h1 className="flex text-7xl pt-[7.5dvh] pb-[4dvh] text-center">
+							<h1 className="flex text-7xl pt-[7.5dvh] pb-[4dvh] text-center text-white">
 								FAQ
 							</h1>
 							<div
@@ -120,9 +120,7 @@ const Home = () => {
 								<div className="faqBox">
 									<button onClick={handleOne} className="faq">
 										<div className="flex flex-row">
-											<p className="mr-[10px] text-left text-white">
-												WHAT IS RISHIZEST?
-											</p>
+											<p className="mr-[10px] text-left">WHAT IS RISHIZEST?</p>
 											<svg
 												className={`my-auto ml-auto flex-shrink-0 ${notOne}`}
 												id="svg"
