@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html
-			className="oveflow-y-auto oveflow-x-hidden h-[100vh] max-w-[100vw]"
+			className="oveflow-y-auto oveflow-x-hidden max-h-[100vh] max-w-[100vw]"
 			lang="en"
 		>
 			<body>
@@ -34,7 +34,7 @@ export default function RootLayout({
 					>
 						{children}
 					</div>
-					<div className="block bottom-0 left-0 right-0 bg-darkzestygreen">
+					<div className="translate-y-[-70px] sm:translate-y-[0px]  block bottom-0 left-0 right-0 bg-darkzestygreen">
 						<ScrollLeft />
 					</div>
 				</div>
