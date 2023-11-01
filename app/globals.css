@@ -224,8 +224,6 @@ select {
 
 .scrollContainer {
   scroll-snap-type: x mandatory;
-  padding-left: 20%;
-  padding-right: 20%;
 }
 
 .rectangle-container {
