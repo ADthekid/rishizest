@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html
-			className="oveflow-y-auto oveflow-x-hidden max-h-[calc(100vh-70px)] sm:max-h-[100vh] max-w-[100vw]"
+			className="oveflow-y-auto oveflow-x-hidden max-h-[calc(100vh-6rem)] sm:max-h-[100vh] max-w-[100vw]"
 			lang="en"
 		>
 			<body>
