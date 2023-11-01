@@ -112,7 +112,7 @@ const Home = () => {
 					<div>
 						<div className="flex flex-col items-center h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] overflow-y-scroll">
 							<h1 className="flex text-7xl pt-[7.5dvh] pb-[4dvh] text-center">
-								FAQS
+								FAQ
 							</h1>
 							<div
 								className={`md:w-[770px] w-[75vw] min-w-[320px] pb-[calc(90px+7.5dvh)] ${figtreeNormal.className}`}
@@ -329,7 +329,7 @@ const Home = () => {
 									<button onClick={handleFive} className="faq">
 										<div className="flex flex-row">
 											<p className="mr-[10px] text-left">
-												WHO OWNS RISHIZEST? CAN I INVEST?
+												WHO OWNS RISHIZEST? CAN I GET INVOLVED?
 											</p>
 											<svg
 												className={`my-auto ml-auto flex-shrink-0 ${notFive}`}
@@ -373,7 +373,7 @@ const Home = () => {
 											className={`faqText text-[20px] text-left mt-[10px] ${five}`}
 										>
 											RishiZest is legally a sole proprietorship of Soorya
-											Ignatius. Any inquiries regarding investment can be sent
+											Ignatius. Any inquiries regarding involvement can be sent
 											to support@rishizest.com.
 										</p>
 									</button>
@@ -423,8 +423,8 @@ const Home = () => {
 										<p
 											className={`faqText text-[20px] text-left mt-[10px] ${six}`}
 										>
-											We&apos;re not in stores yet, but follow our Instagram to
-											stay in the loop.
+											We&apos;re not in stores yet, but follow our Instagram
+											@rishizest to stay in the loop.
 										</p>
 									</button>
 									<button onClick={handleSeven} className="faqBottom">

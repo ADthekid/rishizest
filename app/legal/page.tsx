@@ -64,26 +64,14 @@ const Home = () => {
 							</p>
 							<p className="legalP pb-[.5dvh] indent-[30px]">
 								The following assets used within RishiZest&apos;s marketing
-								materials are attributed as follows:
+								materials are attributed as follows: &quot;Built Titling&quot;
+								is the property of Typodermic Fonts and is available for
+								personal use, &quot;Solvast&quot; is the property of Solvstud
+								and is available for personal use, &quot;Akira Expanded&quot; is
+								the property of Typologic and is available for commercial use,
+								All raw asset templates are the property of GraphicsFuel and are
+								available for commercial use.
 							</p>
-							<ul>
-								<li>
-									• &quot;Built Titling&quot; is the property of Typodermic
-									Fonts and is available for personal use.
-								</li>
-								<li>
-									• &quot;Solvast&quot; is the property of Solvstud and is
-									available for personal use.
-								</li>
-								<li>
-									• &quot;Akira Expanded&quot; is the property of Typologic and
-									is available for commercial use.
-								</li>
-								<li>
-									• All raw asset templates are the property of GraphicsFuel and
-									are available for commercial use.
-								</li>
-							</ul>
 							<p className="legalP pb-[calc(2.5dvh+5px)] indent-[30px]">
 								This legal notice outlines the terms and conditions governing
 								the preorder arrangement with RishiZest. Customers engaging in

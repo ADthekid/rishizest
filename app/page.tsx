@@ -90,8 +90,8 @@ const Home = () => {
 								(or get answers to some frequently asked questions)
 							</a>
 							<form onSubmit={handleSubmit} id="form">
-								<fieldset>
-									<div className="flex w-[100%] overflow-x-auto scrollContainer">
+								<fieldset className="flex flex-col items-center">
+									<div className="flex w-[60%] md:w-[100%] overflow-x-auto scrollContainer">
 										<label
 											htmlFor="oneCan"
 											className="rectangle-container left"
