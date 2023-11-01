@@ -76,7 +76,7 @@ const Home = () => {
 			>
 				<div className="grad">
 					<div className="sect">
-						<div className="h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] flex flex-col items-center justify-center overflow-hidden">
+						<div className="h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] flex flex-col items-center justify-center overflow-hidden">
 							<div className="flex flex-col md:flex-row items-center">
 								<h1 className="reserve">RESERVE YOUR</h1>
 								<img className="reserveImage" src="logo.png" />
