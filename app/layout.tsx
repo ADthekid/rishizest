@@ -24,6 +24,12 @@ export default function RootLayout({
 			className="oveflow-y-auto oveflow-x-hidden max-h-[100dvh] max-w-[100vw]"
 			lang="en"
 		>
+			<head>
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1"
+				></meta>
+			</head>
 			<body>{children}</body>
 		</html>
 	);
