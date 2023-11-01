@@ -34,7 +34,7 @@ export default function RootLayout({
 					>
 						{children}
 					</div>
-					<div className="hidden sm:block bottom-0 left-0 right-0 bg-darkzestygreen">
+					<div className="block bottom-0 left-0 right-0 bg-darkzestygreen">
 						<ScrollLeft />
 					</div>
 				</div>
