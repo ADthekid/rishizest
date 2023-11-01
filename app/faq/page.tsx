@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { Figtree } from "next/font/google";
+import ScrollingBar from "../components/scrollingBar";
+import ScrollLeft from "../components/scrollLeft";
 
 const figtreeBold = Figtree({
 	weight: "900",
@@ -99,375 +101,402 @@ const Home = () => {
 	};
 
 	return (
-		<div>
-			<div className="flex flex-col items-center h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] overflow-y-scroll">
-				<h1 className="flex text-7xl pt-[7.5dvh] pb-[4dvh] text-center">
-					FAQS
-				</h1>
-				<div
-					className={`md:w-[770px] w-[75vw] min-w-[320px] pb-[calc(90px+7.5dvh)] ${figtreeNormal.className}`}
-				>
-					<div className="faqBox">
-						<button onClick={handleOne} className="faq">
-							<div className="flex flex-row">
-								<p className="mr-[10px] text-left">WHAT IS RISHIZEST?</p>
-								<svg
-									className={`my-auto ml-auto flex-shrink-0 ${notOne}`}
-									id="svg"
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0, 0, 400, 400"
-								>
-									<g id="svgg">
-										<path
-											id="path0"
-											d="M30.901 122.296 C 23.876 130.760,34.816 144.136,111.386 220.706 L 200.000 309.320 288.614 220.706 C 365.184 144.136,376.124 130.760,369.099 122.296 C 357.251 108.019,359.139 106.863,277.976 178.125 C 236.868 214.219,201.779 243.750,200.000 243.750 C 198.221 243.750,163.132 214.219,122.024 178.125 C 40.861 106.863,42.749 108.019,30.901 122.296 "
-											stroke="none"
-											fill="#000000"
-											fill-rule="evenodd"
-										></path>
-									</g>
-								</svg>
-								<svg
-									className={`my-auto ml-auto flex-shrink-0 ${one}`}
-									id="svg"
-									version="1.1"
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0, 0, 400,400"
-								>
-									<g id="svgg">
-										<path
-											id="path0"
-											d="M109.765 180.860 C 34.776 255.992,23.936 269.312,30.926 277.735 C 42.745 291.976,40.883 293.118,122.024 221.875 C 163.132 185.781,198.221 156.250,200.000 156.250 C 201.779 156.250,236.868 185.781,277.976 221.875 C 359.117 293.118,357.255 291.976,369.074 277.735 C 376.250 269.088,215.123 93.750,200.000 93.750 C 198.189 93.750,157.583 132.949,109.765 180.860 "
-											stroke="none"
-											fill="#000000"
-											fill-rule="evenodd"
-										></path>
-									</g>
-								</svg>
+		<div className="h-[100dvh] grad flex-col justify-center items-center">
+			<div className="flxed bg-darkzestygreen">
+				<ScrollingBar />
+			</div>
+			<div
+				className={`sect h-[calc(100dvh-140px)] sm:h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] ${figtreeBold.className}`}
+			>
+				<div>
+					<div className="flex flex-col items-center h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] overflow-y-scroll">
+						<h1 className="flex text-7xl pt-[7.5dvh] pb-[4dvh] text-center">
+							FAQS
+						</h1>
+						<div
+							className={`md:w-[770px] w-[75vw] min-w-[320px] pb-[calc(90px+7.5dvh)] ${figtreeNormal.className}`}
+						>
+							<div className="faqBox">
+								<button onClick={handleOne} className="faq">
+									<div className="flex flex-row">
+										<p className="mr-[10px] text-left">WHAT IS RISHIZEST?</p>
+										<svg
+											className={`my-auto ml-auto flex-shrink-0 ${notOne}`}
+											id="svg"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											viewBox="0, 0, 400, 400"
+										>
+											<g id="svgg">
+												<path
+													id="path0"
+													d="M30.901 122.296 C 23.876 130.760,34.816 144.136,111.386 220.706 L 200.000 309.320 288.614 220.706 C 365.184 144.136,376.124 130.760,369.099 122.296 C 357.251 108.019,359.139 106.863,277.976 178.125 C 236.868 214.219,201.779 243.750,200.000 243.750 C 198.221 243.750,163.132 214.219,122.024 178.125 C 40.861 106.863,42.749 108.019,30.901 122.296 "
+													stroke="none"
+													fill="#000000"
+													fill-rule="evenodd"
+												></path>
+											</g>
+										</svg>
+										<svg
+											className={`my-auto ml-auto flex-shrink-0 ${one}`}
+											id="svg"
+											version="1.1"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											viewBox="0, 0, 400,400"
+										>
+											<g id="svgg">
+												<path
+													id="path0"
+													d="M109.765 180.860 C 34.776 255.992,23.936 269.312,30.926 277.735 C 42.745 291.976,40.883 293.118,122.024 221.875 C 163.132 185.781,198.221 156.250,200.000 156.250 C 201.779 156.250,236.868 185.781,277.976 221.875 C 359.117 293.118,357.255 291.976,369.074 277.735 C 376.250 269.088,215.123 93.750,200.000 93.750 C 198.189 93.750,157.583 132.949,109.765 180.860 "
+													stroke="none"
+													fill="#000000"
+													fill-rule="evenodd"
+												></path>
+											</g>
+										</svg>
+									</div>
+									<p
+										className={`faqText text-[20px] text-left mt-[10px] ${one}`}
+									>
+										We&apos;re trying to shake things up as an independent
+										energy drink company and make the most intense energy drink
+										we legally can. Our flagship flavor, Ecological Terrorism,
+										will be the first to launch, totaling 0 calories and packed
+										with all the energizing compounds we can get our hands on.
+									</p>
+								</button>
+								<button onClick={handleTwo} className="faq">
+									<div className="flex flex-row">
+										<p className="mr-[10px] text-left">
+											HOW MUCH DOES EACH CAN COST?
+										</p>
+										<svg
+											className={`my-auto ml-auto flex-shrink-0 ${notTwo}`}
+											id="svg"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											viewBox="0, 0, 400, 400"
+										>
+											<g id="svgg">
+												<path
+													id="path0"
+													d="M30.901 122.296 C 23.876 130.760,34.816 144.136,111.386 220.706 L 200.000 309.320 288.614 220.706 C 365.184 144.136,376.124 130.760,369.099 122.296 C 357.251 108.019,359.139 106.863,277.976 178.125 C 236.868 214.219,201.779 243.750,200.000 243.750 C 198.221 243.750,163.132 214.219,122.024 178.125 C 40.861 106.863,42.749 108.019,30.901 122.296 "
+													stroke="none"
+													fill="#000000"
+													fill-rule="evenodd"
+												></path>
+											</g>
+										</svg>
+										<svg
+											className={`my-auto ml-auto flex-shrink-0 ${two}`}
+											id="svg"
+											version="1.1"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											viewBox="0, 0, 400,400"
+										>
+											<g id="svgg">
+												<path
+													id="path0"
+													d="M109.765 180.860 C 34.776 255.992,23.936 269.312,30.926 277.735 C 42.745 291.976,40.883 293.118,122.024 221.875 C 163.132 185.781,198.221 156.250,200.000 156.250 C 201.779 156.250,236.868 185.781,277.976 221.875 C 359.117 293.118,357.255 291.976,369.074 277.735 C 376.250 269.088,215.123 93.750,200.000 93.750 C 198.189 93.750,157.583 132.949,109.765 180.860 "
+													stroke="none"
+													fill="#000000"
+													fill-rule="evenodd"
+												></path>
+											</g>
+										</svg>
+									</div>
+									<p
+										className={`faqText text-[20px] text-left mt-[10px] ${two}`}
+									>
+										The lowest value we&apos;re able to offer is $5 USD per can,
+										tax and shipping included. We break even at that price
+										point, but we&apos;re more than happy to do so if it means
+										you&apos;ll be drinking Ecological Terrorism.
+									</p>
+								</button>
+								<button onClick={handleThree} className="faq">
+									<div className="flex flex-row">
+										<p className="mr-[10px] text-left">
+											WHEN WILL I GET MY PREORDER?
+										</p>
+										<svg
+											className={`my-auto ml-auto flex-shrink-0 ${notThree}`}
+											id="svg"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											viewBox="0, 0, 400, 400"
+										>
+											<g id="svgg">
+												<path
+													id="path0"
+													d="M30.901 122.296 C 23.876 130.760,34.816 144.136,111.386 220.706 L 200.000 309.320 288.614 220.706 C 365.184 144.136,376.124 130.760,369.099 122.296 C 357.251 108.019,359.139 106.863,277.976 178.125 C 236.868 214.219,201.779 243.750,200.000 243.750 C 198.221 243.750,163.132 214.219,122.024 178.125 C 40.861 106.863,42.749 108.019,30.901 122.296 "
+													stroke="none"
+													fill="#000000"
+													fill-rule="evenodd"
+												></path>
+											</g>
+										</svg>
+										<svg
+											className={`my-auto ml-auto flex-shrink-0 ${three}`}
+											id="svg"
+											version="1.1"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											viewBox="0, 0, 400,400"
+										>
+											<g id="svgg">
+												<path
+													id="path0"
+													d="M109.765 180.860 C 34.776 255.992,23.936 269.312,30.926 277.735 C 42.745 291.976,40.883 293.118,122.024 221.875 C 163.132 185.781,198.221 156.250,200.000 156.250 C 201.779 156.250,236.868 185.781,277.976 221.875 C 359.117 293.118,357.255 291.976,369.074 277.735 C 376.250 269.088,215.123 93.750,200.000 93.750 C 198.189 93.750,157.583 132.949,109.765 180.860 "
+													stroke="none"
+													fill="#000000"
+													fill-rule="evenodd"
+												></path>
+											</g>
+										</svg>
+									</div>
+									<p
+										className={`faqText text-[20px] text-left mt-[10px] ${three}`}
+									>
+										Approximately 3-6 months. That might sound like a while, but
+										it&apos;s important that we take our time to ensure a
+										high-quality product.
+									</p>
+								</button>
+								<button onClick={handleFour} className="faq">
+									<div className="flex flex-row">
+										<p className="mr-[10px] text-left">
+											WILL RISHIZEST BE SAFE FOR CONSUMPTION?
+										</p>
+										<svg
+											className={`my-auto ml-auto flex-shrink-0 ${notFour}`}
+											id="svg"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											viewBox="0, 0, 400, 400"
+										>
+											<g id="svgg">
+												<path
+													id="path0"
+													d="M30.901 122.296 C 23.876 130.760,34.816 144.136,111.386 220.706 L 200.000 309.320 288.614 220.706 C 365.184 144.136,376.124 130.760,369.099 122.296 C 357.251 108.019,359.139 106.863,277.976 178.125 C 236.868 214.219,201.779 243.750,200.000 243.750 C 198.221 243.750,163.132 214.219,122.024 178.125 C 40.861 106.863,42.749 108.019,30.901 122.296 "
+													stroke="none"
+													fill="#000000"
+													fill-rule="evenodd"
+												></path>
+											</g>
+										</svg>
+										<svg
+											className={`my-auto ml-auto flex-shrink-0 ${four}`}
+											id="svg"
+											version="1.1"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											viewBox="0, 0, 400,400"
+										>
+											<g id="svgg">
+												<path
+													id="path0"
+													d="M109.765 180.860 C 34.776 255.992,23.936 269.312,30.926 277.735 C 42.745 291.976,40.883 293.118,122.024 221.875 C 163.132 185.781,198.221 156.250,200.000 156.250 C 201.779 156.250,236.868 185.781,277.976 221.875 C 359.117 293.118,357.255 291.976,369.074 277.735 C 376.250 269.088,215.123 93.750,200.000 93.750 C 198.189 93.750,157.583 132.949,109.765 180.860 "
+													stroke="none"
+													fill="#000000"
+													fill-rule="evenodd"
+												></path>
+											</g>
+										</svg>
+									</div>
+									<p
+										className={`faqText text-[20px] text-left mt-[10px] ${four}`}
+									>
+										Short answer, yes. RishiZest is being developed by a team of
+										qualified food scientists, and not a single can will leave
+										the production line without government quality assurance.
+										Just make sure to drink responsibly. This level of extreme
+										isn&apos;t for everybody.
+									</p>
+								</button>
+								<button onClick={handleFive} className="faq">
+									<div className="flex flex-row">
+										<p className="mr-[10px] text-left">
+											WHO OWNS RISHIZEST? CAN I INVEST?
+										</p>
+										<svg
+											className={`my-auto ml-auto flex-shrink-0 ${notFive}`}
+											id="svg"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											viewBox="0, 0, 400, 400"
+										>
+											<g id="svgg">
+												<path
+													id="path0"
+													d="M30.901 122.296 C 23.876 130.760,34.816 144.136,111.386 220.706 L 200.000 309.320 288.614 220.706 C 365.184 144.136,376.124 130.760,369.099 122.296 C 357.251 108.019,359.139 106.863,277.976 178.125 C 236.868 214.219,201.779 243.750,200.000 243.750 C 198.221 243.750,163.132 214.219,122.024 178.125 C 40.861 106.863,42.749 108.019,30.901 122.296 "
+													stroke="none"
+													fill="#000000"
+													fill-rule="evenodd"
+												></path>
+											</g>
+										</svg>
+										<svg
+											className={`my-auto ml-auto flex-shrink-0 ${five}`}
+											id="svg"
+											version="1.1"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											viewBox="0, 0, 400,400"
+										>
+											<g id="svgg">
+												<path
+													id="path0"
+													d="M109.765 180.860 C 34.776 255.992,23.936 269.312,30.926 277.735 C 42.745 291.976,40.883 293.118,122.024 221.875 C 163.132 185.781,198.221 156.250,200.000 156.250 C 201.779 156.250,236.868 185.781,277.976 221.875 C 359.117 293.118,357.255 291.976,369.074 277.735 C 376.250 269.088,215.123 93.750,200.000 93.750 C 198.189 93.750,157.583 132.949,109.765 180.860 "
+													stroke="none"
+													fill="#000000"
+													fill-rule="evenodd"
+												></path>
+											</g>
+										</svg>
+									</div>
+									<p
+										className={`faqText text-[20px] text-left mt-[10px] ${five}`}
+									>
+										RishiZest is legally a sole proprietorship of Soorya
+										Ignatius. Any inquiries regarding investment can be sent to{" "}
+										support@rishizest.com.
+									</p>
+								</button>
+								<button onClick={handleSix} className="faq">
+									<div className="flex flex-row">
+										<p className="mr-[10px] text-left">
+											WHERE CAN I FIND RISHIZEST?
+										</p>
+										<svg
+											className={`my-auto ml-auto flex-shrink-0 ${notSix}`}
+											id="svg"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											viewBox="0, 0, 400, 400"
+										>
+											<g id="svgg">
+												<path
+													id="path0"
+													d="M30.901 122.296 C 23.876 130.760,34.816 144.136,111.386 220.706 L 200.000 309.320 288.614 220.706 C 365.184 144.136,376.124 130.760,369.099 122.296 C 357.251 108.019,359.139 106.863,277.976 178.125 C 236.868 214.219,201.779 243.750,200.000 243.750 C 198.221 243.750,163.132 214.219,122.024 178.125 C 40.861 106.863,42.749 108.019,30.901 122.296 "
+													stroke="none"
+													fill="#000000"
+													fill-rule="evenodd"
+												></path>
+											</g>
+										</svg>
+										<svg
+											className={`my-auto ml-auto flex-shrink-0 ${six}`}
+											id="svg"
+											version="1.1"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											viewBox="0, 0, 400,400"
+										>
+											<g id="svgg">
+												<path
+													id="path0"
+													d="M109.765 180.860 C 34.776 255.992,23.936 269.312,30.926 277.735 C 42.745 291.976,40.883 293.118,122.024 221.875 C 163.132 185.781,198.221 156.250,200.000 156.250 C 201.779 156.250,236.868 185.781,277.976 221.875 C 359.117 293.118,357.255 291.976,369.074 277.735 C 376.250 269.088,215.123 93.750,200.000 93.750 C 198.189 93.750,157.583 132.949,109.765 180.860 "
+													stroke="none"
+													fill="#000000"
+													fill-rule="evenodd"
+												></path>
+											</g>
+										</svg>
+									</div>
+									<p
+										className={`faqText text-[20px] text-left mt-[10px] ${six}`}
+									>
+										We&apos;re not in stores yet, but follow our Instagram to
+										stay in the loop.
+									</p>
+								</button>
+								<button onClick={handleSeven} className="faqBottom">
+									<div className="flex flex-row">
+										<p className="mr-[10px] text-left">
+											I HAVE A QUESTION THAT ISN&apos;T HERE.
+										</p>
+										<svg
+											className={`my-auto ml-auto flex-shrink-0 ${notSeven}`}
+											id="svg"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											viewBox="0, 0, 400, 400"
+										>
+											<g id="svgg">
+												<path
+													id="path0"
+													d="M30.901 122.296 C 23.876 130.760,34.816 144.136,111.386 220.706 L 200.000 309.320 288.614 220.706 C 365.184 144.136,376.124 130.760,369.099 122.296 C 357.251 108.019,359.139 106.863,277.976 178.125 C 236.868 214.219,201.779 243.750,200.000 243.750 C 198.221 243.750,163.132 214.219,122.024 178.125 C 40.861 106.863,42.749 108.019,30.901 122.296 "
+													stroke="none"
+													fill="#000000"
+													fill-rule="evenodd"
+												></path>
+											</g>
+										</svg>
+										<svg
+											className={`my-auto ml-auto flex-shrink-0 ${seven}`}
+											id="svg"
+											version="1.1"
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											viewBox="0, 0, 400,400"
+										>
+											<g id="svgg">
+												<path
+													id="path0"
+													d="M109.765 180.860 C 34.776 255.992,23.936 269.312,30.926 277.735 C 42.745 291.976,40.883 293.118,122.024 221.875 C 163.132 185.781,198.221 156.250,200.000 156.250 C 201.779 156.250,236.868 185.781,277.976 221.875 C 359.117 293.118,357.255 291.976,369.074 277.735 C 376.250 269.088,215.123 93.750,200.000 93.750 C 198.189 93.750,157.583 132.949,109.765 180.860 "
+													stroke="none"
+													fill="#000000"
+													fill-rule="evenodd"
+												></path>
+											</g>
+										</svg>
+									</div>
+									<p
+										className={`faqText text-[20px] text-left mt-[10px] ${seven}`}
+									>
+										No worries! Contact us at support@rishizest.com and
+										we&apos;ll get back to you as soon as we can. All questions
+										are welcome.
+									</p>
+								</button>
 							</div>
-							<p className={`faqText text-[20px] text-left mt-[10px] ${one}`}>
-								We&apos;re trying to shake things up as an independent energy
-								drink company and make the most intense energy drink we legally
-								can. Our flagship flavor, Ecological Terrorism, will be the
-								first to launch, totaling 0 calories and packed with all the
-								energizing compounds we can get our hands on.
-							</p>
-						</button>
-						<button onClick={handleTwo} className="faq">
-							<div className="flex flex-row">
-								<p className="mr-[10px] text-left">
-									HOW MUCH DOES EACH CAN COST?
-								</p>
-								<svg
-									className={`my-auto ml-auto flex-shrink-0 ${notTwo}`}
-									id="svg"
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0, 0, 400, 400"
-								>
-									<g id="svgg">
-										<path
-											id="path0"
-											d="M30.901 122.296 C 23.876 130.760,34.816 144.136,111.386 220.706 L 200.000 309.320 288.614 220.706 C 365.184 144.136,376.124 130.760,369.099 122.296 C 357.251 108.019,359.139 106.863,277.976 178.125 C 236.868 214.219,201.779 243.750,200.000 243.750 C 198.221 243.750,163.132 214.219,122.024 178.125 C 40.861 106.863,42.749 108.019,30.901 122.296 "
-											stroke="none"
-											fill="#000000"
-											fill-rule="evenodd"
-										></path>
-									</g>
-								</svg>
-								<svg
-									className={`my-auto ml-auto flex-shrink-0 ${two}`}
-									id="svg"
-									version="1.1"
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0, 0, 400,400"
-								>
-									<g id="svgg">
-										<path
-											id="path0"
-											d="M109.765 180.860 C 34.776 255.992,23.936 269.312,30.926 277.735 C 42.745 291.976,40.883 293.118,122.024 221.875 C 163.132 185.781,198.221 156.250,200.000 156.250 C 201.779 156.250,236.868 185.781,277.976 221.875 C 359.117 293.118,357.255 291.976,369.074 277.735 C 376.250 269.088,215.123 93.750,200.000 93.750 C 198.189 93.750,157.583 132.949,109.765 180.860 "
-											stroke="none"
-											fill="#000000"
-											fill-rule="evenodd"
-										></path>
-									</g>
-								</svg>
-							</div>
-							<p className={`faqText text-[20px] text-left mt-[10px] ${two}`}>
-								The lowest value we&apos;re able to offer is $5 USD per can, tax
-								and shipping included. We break even at that price point, but
-								we&apos;re more than happy to do so if it means you&apos;ll be
-								drinking Ecological Terrorism.
-							</p>
-						</button>
-						<button onClick={handleThree} className="faq">
-							<div className="flex flex-row">
-								<p className="mr-[10px] text-left">
-									WHEN WILL I GET MY PREORDER?
-								</p>
-								<svg
-									className={`my-auto ml-auto flex-shrink-0 ${notThree}`}
-									id="svg"
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0, 0, 400, 400"
-								>
-									<g id="svgg">
-										<path
-											id="path0"
-											d="M30.901 122.296 C 23.876 130.760,34.816 144.136,111.386 220.706 L 200.000 309.320 288.614 220.706 C 365.184 144.136,376.124 130.760,369.099 122.296 C 357.251 108.019,359.139 106.863,277.976 178.125 C 236.868 214.219,201.779 243.750,200.000 243.750 C 198.221 243.750,163.132 214.219,122.024 178.125 C 40.861 106.863,42.749 108.019,30.901 122.296 "
-											stroke="none"
-											fill="#000000"
-											fill-rule="evenodd"
-										></path>
-									</g>
-								</svg>
-								<svg
-									className={`my-auto ml-auto flex-shrink-0 ${three}`}
-									id="svg"
-									version="1.1"
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0, 0, 400,400"
-								>
-									<g id="svgg">
-										<path
-											id="path0"
-											d="M109.765 180.860 C 34.776 255.992,23.936 269.312,30.926 277.735 C 42.745 291.976,40.883 293.118,122.024 221.875 C 163.132 185.781,198.221 156.250,200.000 156.250 C 201.779 156.250,236.868 185.781,277.976 221.875 C 359.117 293.118,357.255 291.976,369.074 277.735 C 376.250 269.088,215.123 93.750,200.000 93.750 C 198.189 93.750,157.583 132.949,109.765 180.860 "
-											stroke="none"
-											fill="#000000"
-											fill-rule="evenodd"
-										></path>
-									</g>
-								</svg>
-							</div>
-							<p className={`faqText text-[20px] text-left mt-[10px] ${three}`}>
-								Approximately 3-6 months. That might sound like a while, but
-								it&apos;s important that we take our time to ensure a
-								high-quality product.
-							</p>
-						</button>
-						<button onClick={handleFour} className="faq">
-							<div className="flex flex-row">
-								<p className="mr-[10px] text-left">
-									WILL RISHIZEST BE SAFE FOR CONSUMPTION?
-								</p>
-								<svg
-									className={`my-auto ml-auto flex-shrink-0 ${notFour}`}
-									id="svg"
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0, 0, 400, 400"
-								>
-									<g id="svgg">
-										<path
-											id="path0"
-											d="M30.901 122.296 C 23.876 130.760,34.816 144.136,111.386 220.706 L 200.000 309.320 288.614 220.706 C 365.184 144.136,376.124 130.760,369.099 122.296 C 357.251 108.019,359.139 106.863,277.976 178.125 C 236.868 214.219,201.779 243.750,200.000 243.750 C 198.221 243.750,163.132 214.219,122.024 178.125 C 40.861 106.863,42.749 108.019,30.901 122.296 "
-											stroke="none"
-											fill="#000000"
-											fill-rule="evenodd"
-										></path>
-									</g>
-								</svg>
-								<svg
-									className={`my-auto ml-auto flex-shrink-0 ${four}`}
-									id="svg"
-									version="1.1"
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0, 0, 400,400"
-								>
-									<g id="svgg">
-										<path
-											id="path0"
-											d="M109.765 180.860 C 34.776 255.992,23.936 269.312,30.926 277.735 C 42.745 291.976,40.883 293.118,122.024 221.875 C 163.132 185.781,198.221 156.250,200.000 156.250 C 201.779 156.250,236.868 185.781,277.976 221.875 C 359.117 293.118,357.255 291.976,369.074 277.735 C 376.250 269.088,215.123 93.750,200.000 93.750 C 198.189 93.750,157.583 132.949,109.765 180.860 "
-											stroke="none"
-											fill="#000000"
-											fill-rule="evenodd"
-										></path>
-									</g>
-								</svg>
-							</div>
-							<p className={`faqText text-[20px] text-left mt-[10px] ${four}`}>
-								Short answer, yes. RishiZest is being developed by a team of
-								qualified food scientists, and not a single can will leave the
-								production line without government quality assurance. Just make
-								sure to drink responsibly. This level of extreme isn&apos;t for
-								everybody.
-							</p>
-						</button>
-						<button onClick={handleFive} className="faq">
-							<div className="flex flex-row">
-								<p className="mr-[10px] text-left">
-									WHO OWNS RISHIZEST? CAN I INVEST?
-								</p>
-								<svg
-									className={`my-auto ml-auto flex-shrink-0 ${notFive}`}
-									id="svg"
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0, 0, 400, 400"
-								>
-									<g id="svgg">
-										<path
-											id="path0"
-											d="M30.901 122.296 C 23.876 130.760,34.816 144.136,111.386 220.706 L 200.000 309.320 288.614 220.706 C 365.184 144.136,376.124 130.760,369.099 122.296 C 357.251 108.019,359.139 106.863,277.976 178.125 C 236.868 214.219,201.779 243.750,200.000 243.750 C 198.221 243.750,163.132 214.219,122.024 178.125 C 40.861 106.863,42.749 108.019,30.901 122.296 "
-											stroke="none"
-											fill="#000000"
-											fill-rule="evenodd"
-										></path>
-									</g>
-								</svg>
-								<svg
-									className={`my-auto ml-auto flex-shrink-0 ${five}`}
-									id="svg"
-									version="1.1"
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0, 0, 400,400"
-								>
-									<g id="svgg">
-										<path
-											id="path0"
-											d="M109.765 180.860 C 34.776 255.992,23.936 269.312,30.926 277.735 C 42.745 291.976,40.883 293.118,122.024 221.875 C 163.132 185.781,198.221 156.250,200.000 156.250 C 201.779 156.250,236.868 185.781,277.976 221.875 C 359.117 293.118,357.255 291.976,369.074 277.735 C 376.250 269.088,215.123 93.750,200.000 93.750 C 198.189 93.750,157.583 132.949,109.765 180.860 "
-											stroke="none"
-											fill="#000000"
-											fill-rule="evenodd"
-										></path>
-									</g>
-								</svg>
-							</div>
-							<p className={`faqText text-[20px] text-left mt-[10px] ${five}`}>
-								RishiZest is legally a sole proprietorship of Soorya Ignatius.
-								Any inquiries regarding investment can be sent to{" "}
-								support@rishizest.com.
-							</p>
-						</button>
-						<button onClick={handleSix} className="faq">
-							<div className="flex flex-row">
-								<p className="mr-[10px] text-left">
-									WHERE CAN I FIND RISHIZEST?
-								</p>
-								<svg
-									className={`my-auto ml-auto flex-shrink-0 ${notSix}`}
-									id="svg"
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0, 0, 400, 400"
-								>
-									<g id="svgg">
-										<path
-											id="path0"
-											d="M30.901 122.296 C 23.876 130.760,34.816 144.136,111.386 220.706 L 200.000 309.320 288.614 220.706 C 365.184 144.136,376.124 130.760,369.099 122.296 C 357.251 108.019,359.139 106.863,277.976 178.125 C 236.868 214.219,201.779 243.750,200.000 243.750 C 198.221 243.750,163.132 214.219,122.024 178.125 C 40.861 106.863,42.749 108.019,30.901 122.296 "
-											stroke="none"
-											fill="#000000"
-											fill-rule="evenodd"
-										></path>
-									</g>
-								</svg>
-								<svg
-									className={`my-auto ml-auto flex-shrink-0 ${six}`}
-									id="svg"
-									version="1.1"
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0, 0, 400,400"
-								>
-									<g id="svgg">
-										<path
-											id="path0"
-											d="M109.765 180.860 C 34.776 255.992,23.936 269.312,30.926 277.735 C 42.745 291.976,40.883 293.118,122.024 221.875 C 163.132 185.781,198.221 156.250,200.000 156.250 C 201.779 156.250,236.868 185.781,277.976 221.875 C 359.117 293.118,357.255 291.976,369.074 277.735 C 376.250 269.088,215.123 93.750,200.000 93.750 C 198.189 93.750,157.583 132.949,109.765 180.860 "
-											stroke="none"
-											fill="#000000"
-											fill-rule="evenodd"
-										></path>
-									</g>
-								</svg>
-							</div>
-							<p className={`faqText text-[20px] text-left mt-[10px] ${six}`}>
-								We&apos;re not in stores yet, but follow our Instagram to stay
-								in the loop.
-							</p>
-						</button>
-						<button onClick={handleSeven} className="faqBottom">
-							<div className="flex flex-row">
-								<p className="mr-[10px] text-left">
-									I HAVE A QUESTION THAT ISN&apos;T HERE.
-								</p>
-								<svg
-									className={`my-auto ml-auto flex-shrink-0 ${notSeven}`}
-									id="svg"
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0, 0, 400, 400"
-								>
-									<g id="svgg">
-										<path
-											id="path0"
-											d="M30.901 122.296 C 23.876 130.760,34.816 144.136,111.386 220.706 L 200.000 309.320 288.614 220.706 C 365.184 144.136,376.124 130.760,369.099 122.296 C 357.251 108.019,359.139 106.863,277.976 178.125 C 236.868 214.219,201.779 243.750,200.000 243.750 C 198.221 243.750,163.132 214.219,122.024 178.125 C 40.861 106.863,42.749 108.019,30.901 122.296 "
-											stroke="none"
-											fill="#000000"
-											fill-rule="evenodd"
-										></path>
-									</g>
-								</svg>
-								<svg
-									className={`my-auto ml-auto flex-shrink-0 ${seven}`}
-									id="svg"
-									version="1.1"
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0, 0, 400,400"
-								>
-									<g id="svgg">
-										<path
-											id="path0"
-											d="M109.765 180.860 C 34.776 255.992,23.936 269.312,30.926 277.735 C 42.745 291.976,40.883 293.118,122.024 221.875 C 163.132 185.781,198.221 156.250,200.000 156.250 C 201.779 156.250,236.868 185.781,277.976 221.875 C 359.117 293.118,357.255 291.976,369.074 277.735 C 376.250 269.088,215.123 93.750,200.000 93.750 C 198.189 93.750,157.583 132.949,109.765 180.860 "
-											stroke="none"
-											fill="#000000"
-											fill-rule="evenodd"
-										></path>
-									</g>
-								</svg>
-							</div>
-							<p className={`faqText text-[20px] text-left mt-[10px] ${seven}`}>
-								No worries! Contact us at support@rishizest.com and we&apos;ll
-								get back to you as soon as we can. All questions are welcome.
-							</p>
-						</button>
-					</div>
-				</div>
-				<div className="relative bottom-[calc(70px+7.5vh)] sm:bottom-[calc(90px+7.5vh)] left-0 right-0 z-10">
-					<div
-						className={`flex items-center justify-center ${figtreeBold.className}`}
-					>
-						<a href="/">
-							<button
-								className="text-3xl bg-black px-[32px] py-[15px] rounded-full mt-[20px]"
-								type="submit"
+						</div>
+						<div className="relative bottom-[calc(70px+7.5vh)] sm:bottom-[calc(90px+7.5vh)] left-0 right-0 z-10">
+							<div
+								className={`flex items-center justify-center ${figtreeBold.className}`}
 							>
-								RESERVE
-							</button>
-						</a>
+								<a href="/">
+									<button
+										className="text-3xl bg-black px-[32px] py-[15px] rounded-full mt-[20px]"
+										type="submit"
+									>
+										RESERVE
+									</button>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
+			</div>
+			<div className="block fixed bottom-0 left-0 right-0 bg-darkzestygreen">
+				<ScrollLeft />
 			</div>
 		</div>
 	);
