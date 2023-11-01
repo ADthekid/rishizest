@@ -106,7 +106,7 @@ const Home = () => {
 				<ScrollingBar />
 			</div>
 			<div
-				className={`grad h-[calc(100dvh)] sm:h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] ${figtreeBold.className}`}
+				className={`grad h-[calc(100dvh-140px)] sm:h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] ${figtreeBold.className}`}
 			>
 				<div className="sect">
 					<div>
