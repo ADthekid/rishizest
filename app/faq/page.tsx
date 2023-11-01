@@ -257,7 +257,7 @@ const Home = () => {
 						<button onClick={handleFour} className="faq">
 							<div className="flex flex-row">
 								<p className="mr-[10px] text-left">
-									WILL RISHIZEST BE SAFE FOR CONSUMTION?
+									WILL RISHIZEST BE SAFE FOR CONSUMPTION?
 								</p>
 								<svg
 									className={`my-auto ml-auto flex-shrink-0 ${notFour}`}
