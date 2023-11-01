@@ -65,7 +65,7 @@ const Home = () => {
 	}, []);
 
 	return (
-		<div className="h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] flex flex-col items-center justify-center overflow-hidden w-[100%]">
+		<div className="h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] max-w-[100vw] flex flex-col items-center justify-center overflow-hidden w-[100%]">
 			<div className="flex flex-col md:flex-row items-center">
 				<h1 className="reserve md:text-[60px] text-[30px] text-center">
 					RESERVE YOUR
@@ -78,7 +78,7 @@ const Home = () => {
 			>
 				(or get answers to some frequently asked questions)
 			</a>
-			<form onSubmit={handleSubmit} id="form" className="">
+			<form onSubmit={handleSubmit} id="form" className="max-w-[100vw]">
 				<fieldset className="">
 					<div className="flex items-center w-[100%] overflow-x-auto scrollContainer px-[20%] md:px-[0%]">
 						<label htmlFor="oneCan" className="rectangle-container">
