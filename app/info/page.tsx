@@ -77,23 +77,29 @@ const Home = () => {
 											id="first"
 											name="first"
 											required
-											placeholder="FIRST"
+											placeholder="FIRST NAME"
 											className="infoField border-[6px] rounded-xl border-darkzestygreen text-black bg-white text-xl px-[10px] py-[7px] mr-[12.5px] lg:w-[377.5px] mb-[12.5px] w-[75vw]"
 										></input>
 										<input
 											id="last"
 											name="last"
 											required
-											placeholder="LAST"
+											placeholder="LAST NAME"
 											className="infoField border-[6px] rounded-xl border-darkzestygreen text-black bg-white text-xl px-[10px] py-[7px] lg:w-[377.5px] mb-[12.5px] w-[75vw]"
 										></input>
 									</div>
 									<input
 										id="phone"
 										name="phone"
+										maxLength={10}
 										required
 										placeholder="(---) --- ----"
 										className="infoField border-[6px] rounded-xl border-darkzestygreen text-black bg-white text-xl px-[10px] py-[7px] mb-[12.5px] w-[75vw] max-w-[770px]"
+										onKeyPress={(event) => {
+											if (!/[0-9]/.test(event.key)) {
+												event.preventDefault();
+											}
+										}}
 									></input>
 									<input
 										id="email"
@@ -106,7 +112,7 @@ const Home = () => {
 										id="addyOne"
 										name="addyOne"
 										required
-										placeholder="ADDY"
+										placeholder="ADDRESS"
 										className="infoField border-[6px] rounded-xl border-darkzestygreen text-black bg-white text-xl px-[10px] py-[7px] mb-[12.5px] w-[75vw] max-w-[770px]"
 									></input>
 									<input
@@ -136,7 +142,13 @@ const Home = () => {
 												name="zip"
 												required
 												placeholder="ZIP"
+												maxLength={5}
 												className="infoField border-[6px] rounded-xl border-darkzestygreen text-black bg-white text-xl px-[10px] py-[7px] mb-[12.5px] w-[75vw] sm:w-[calc(25vw-10px)] sm:max-w-[248.3333333333px]"
+												onKeyPress={(event) => {
+													if (!/[0-9]/.test(event.key)) {
+														event.preventDefault();
+													}
+												}}
 											></input>
 										</div>
 										<div

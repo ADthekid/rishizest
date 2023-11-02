@@ -4,6 +4,7 @@ import { Figtree } from "next/font/google";
 import ScrollingBar from "../components/scrollingBar";
 import ScrollLeft from "../components/scrollLeft";
 import { useEffect, useState } from "react";
+import { db } from "../firebase";
 
 const figtreeBold = Figtree({
 	weight: "900",
@@ -42,14 +43,14 @@ const Home = () => {
 							ORDER PLACED
 						</h1>
 						<div
-							className={`md:w-[770px] w-[75vw] text-lg ${figtreeNormal.className}`}
+							className={`faqBox px-[20px] py-[20px] md:w-[770px] w-[75vw] text-lg ${figtreeNormal.className}`}
 						>
-							<p className="indent-[30px] text-justify">
-								Thank you for your order of {cans} cans. You are currently
-								[position + idk, 50?] in line. An invoice for {amount} dollars
-								will be sent to your email as soon as your order is ready. In
-								the meantime, if you&apos;d like to stay informed about what
-								we&apos;re up to, make sure to find us on Instagram&nbsp;
+							<p className="text-black text-center md:text-justify">
+								Thank you for your order of {cans} cans. An invoice for {amount}{" "}
+								dollars will be sent to your email as soon as your order is
+								ready. In the meantime, if you&apos;d like to stay informed
+								about what we&apos;re up to, make sure to find us on
+								Instagram&nbsp;
 								<a
 									href="https://www.instagram.com/rishizest/"
 									target="new"

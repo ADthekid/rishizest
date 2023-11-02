@@ -97,7 +97,7 @@ body::-webkit-scrollbar {
   transform: translateY(0.625vh);
 }
 
-select {
+.customSelect {
   outline: none;
   border: none;
   box-shadow: none;
@@ -123,6 +123,10 @@ select {
 .reserveImage {
   padding-left: 0px;
   height: 45px;
+}
+
+.legalP {
+  text-align: center;
 }
 
 @media only screen and (min-height: 700px){
@@ -185,6 +189,10 @@ select {
 
   .bannerLogo {
     width: 39px;
+  }
+
+  .legalP {
+    text-align: justify;
   }
 }
 
@@ -264,10 +272,7 @@ div {
   border-radius: 30px;
   border: 10px solid #b6ff00;
   background-color: white;
-}
-
-.legalP {
-  text-align: justify;
+  text-align: center;
 }
 
 .infoCard {
@@ -297,5 +302,5 @@ div {
 }
 
 .social {
-  color: #b6ff00;
+  color: #770cff;
 }

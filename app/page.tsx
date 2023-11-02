@@ -1,6 +1,6 @@
 // pages/index.js
 "use client";
-import React, { FormEvent, useState, useEffect } from "react";
+import React, { FormEvent, useState, useEffect, ChangeEvent } from "react";
 import { Figtree } from "next/font/google";
 import { useRouter } from "next/navigation";
 import ScrollingBar from "./components/scrollingBar";
@@ -18,7 +18,7 @@ const figtreeNormal = Figtree({
 
 const Home = () => {
 	const [cans, setCans] = useState(0);
-	const [selectedValue, setSelectedValue] = useState(5);
+	const [value, setValue] = useState(5);
 	const router = useRouter();
 
 	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -37,19 +37,14 @@ const Home = () => {
 				setCans(3);
 				break;
 			case "customCans":
-				setCans(selectedValue);
+				setCans(value);
 				break;
 		}
 	};
 
-	const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-		setSelectedValue(parseInt(event.target.value));
+	const handleNumberInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+		setValue(Number(e.target.value));
 	};
-
-	const numbers: number[] = [];
-	for (let i = 6; i <= 69; i++) {
-		numbers.push(i);
-	}
 
 	useEffect(() => {
 		const container: HTMLElement | null =
@@ -78,7 +73,7 @@ const Home = () => {
 					<div className="sect">
 						<div className="h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] flex flex-col items-center justify-center overflow-hidden">
 							<div className="flex flex-col md:flex-row items-center">
-								<h1 className="reserve">RESERVE YOUR</h1>
+								<h1 className="reserve whitespace-nowrap">RESERVE YOUR</h1>
 								<img className="reserveImage" src="logo.png" />
 							</div>
 							<a
@@ -145,18 +140,14 @@ const Home = () => {
 													id="customCans"
 													name="amount"
 												/>
-												<select
-													id="mySelect"
-													value={selectedValue}
-													onChange={handleSelectChange}
-												>
-													<option value="5">5</option>
-													{numbers.map((number: number) => (
-														<option key={number} value={number}>
-															{number}
-														</option>
-													))}
-												</select>
+												<input
+													className="customSelect"
+													type="number"
+													value={value}
+													onChange={handleNumberInputChange}
+													min={5}
+													max={69}
+												></input>
 												<label className="radioLabel" htmlFor="customCans">
 													CANS
 												</label>

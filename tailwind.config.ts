@@ -22,6 +22,7 @@ const config: Config = {
 			colors: {
 				zestygreen: "#e6f50e",
 				darkzestygreen: "#b0f50e",
+				zestypurple: "#770cff",
 				darkpurple: "#c400ff",
 				lightpurple: "#780bff",
 			},
