@@ -480,7 +480,7 @@ const Home = () => {
 									</button>
 								</div>
 							</div>
-							<div className="relative bottom-[calc(7.55dvh)] sm:bottom-[calc(7.5dvh)] left-0 right-0 z-10">
+							<div className="relative bottom-[calc(7.5dvh)] sm:bottom-[calc(7.5dvh)] left-0 right-0 z-10">
 								<div
 									className={`flex items-center justify-center ${figtreeBold.className}`}
 								>
