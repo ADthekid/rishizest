@@ -24,7 +24,7 @@ const Home = () => {
 	}*/
 
 	return (
-		<div className="h-[100dvh] flex-col justify-center items-center">
+		<div className="h-[100dvh] flex-col justify-center items-center hidden">
 			<div className="flxed bg-darkzestygreen">
 				<ScrollingBar />
 			</div>
