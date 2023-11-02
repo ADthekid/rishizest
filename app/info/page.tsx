@@ -23,6 +23,7 @@ const Home = () => {
 	const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		const storedData = localStorage.getItem("cans");
+		localStorage.setItem("cans", JSON.stringify(storedData));
 		const cans = storedData ? JSON.parse(storedData) : null;
 		const form = event.currentTarget as HTMLFormElement;
 		const first = (form.elements.namedItem("first") as HTMLInputElement).value;

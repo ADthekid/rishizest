@@ -3,6 +3,7 @@ import React from "react";
 import { Figtree } from "next/font/google";
 import ScrollingBar from "../components/scrollingBar";
 import ScrollLeft from "../components/scrollLeft";
+import { useEffect, useState } from "react";
 
 const figtreeBold = Figtree({
 	weight: "900",
@@ -15,13 +16,17 @@ const figtreeNormal = Figtree({
 });
 
 const Home = () => {
-	const cans = 5;
-	const amount = 25;
-	/*const cans = localStorage.getItem("cans");
-	let amount = 0;
-	if (cans) {
-		amount = parseInt(cans) * 5;
-	}*/
+	const [cans, setCans] = useState(null);
+	const [amount, setAmount] = useState(0);
+
+	useEffect(() => {
+		let storedData = localStorage.getItem("cans");
+		const parsedCans = storedData ? JSON.parse(storedData) : null;
+		if (parsedCans) {
+			setCans(parsedCans);
+			setAmount(parsedCans * 5);
+		}
+	}, []);
 
 	return (
 		<div className="h-[100dvh] flex-col justify-center items-center overflow-hidden">
