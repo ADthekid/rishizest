@@ -51,7 +51,7 @@ const Home = () => {
 
 	const handleBlur = () => {
 		setIsEditing(false);
-		if (value < 5) {
+		if (value < 5 || isNaN(value)) {
 			setValue(5);
 		} else if (value > 69) {
 			setValue(69);
