@@ -16,7 +16,7 @@ const figtreeNormal = Figtree({
 	subsets: ["latin"],
 });
 
-const Home = () => {
+const outro = () => {
 	const [cans, setCans] = useState(0);
 	const [amount, setAmount] = useState(0);
 
@@ -83,4 +83,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default outro;

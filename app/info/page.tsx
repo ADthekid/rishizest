@@ -17,7 +17,7 @@ const figtreeNormal = Figtree({
 	subsets: ["latin"],
 });
 
-const Home = () => {
+const info = () => {
 	const router = useRouter();
 
 	const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -176,4 +176,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default info;
