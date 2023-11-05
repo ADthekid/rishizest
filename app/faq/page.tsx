@@ -374,7 +374,7 @@ const Home = () => {
 										>
 											RishiZest is legally a sole proprietorship of Soorya
 											Ignatius. Any inquiries regarding involvement can be sent
-											to @rishizest.com.
+											to s@rishizest.com.
 										</p>
 									</button>
 									<button onClick={handleSix} className="faq">
