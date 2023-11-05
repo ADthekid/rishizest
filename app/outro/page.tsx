@@ -17,12 +17,12 @@ const figtreeNormal = Figtree({
 });
 
 const Home = () => {
-	const [cans, setCans] = useState(null);
+	const [cans, setCans] = useState(0);
 	const [amount, setAmount] = useState(0);
 
 	useEffect(() => {
 		let storedData = localStorage.getItem("cans");
-		const parsedCans = storedData ? JSON.parse(storedData) : null;
+		const parsedCans = parseInt(storedData ? JSON.parse(storedData) : null);
 		if (parsedCans) {
 			setCans(parsedCans);
 			setAmount(parsedCans * 5);
@@ -46,8 +46,8 @@ const Home = () => {
 							className={`faqBox px-[20px] py-[20px] md:w-[770px] w-[75vw] text-lg ${figtreeNormal.className}`}
 						>
 							<p className="text-black text-left md:text-justify">
-								Thank you for your order of {cans} cans. An invoice for {amount}{" "}
-								dollars will be sent to your email as soon as your order is
+								Thank you for your order of {cans} cans. An invoice for $
+								{amount} USD will be sent to your email as soon as your order is
 								ready. In the meantime, if you&apos;d like to stay informed
 								about what we&apos;re up to, make sure to find us on
 								Instagram&nbsp;
