@@ -14,7 +14,7 @@ const figtreeNormal = Figtree({
 	subsets: ["latin"],
 });
 
-const faq = () => {
+const Home = () => {
 	const [one, setOne] = useState("hidden");
 	const [two, setTwo] = useState("hidden");
 	const [three, setThree] = useState("hidden");
@@ -505,4 +505,4 @@ const faq = () => {
 	);
 };
 
-export default faq;
+export default Home;

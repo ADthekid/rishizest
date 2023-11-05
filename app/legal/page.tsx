@@ -13,7 +13,7 @@ const figtreeNormal = Figtree({
 	subsets: ["latin"],
 });
 
-const legal = () => {
+const Home = () => {
 	return (
 		<div className="h-[100dvh] flex-col justify-center items-center">
 			<div className="flxed bg-darkzestygreen">
@@ -104,4 +104,4 @@ const legal = () => {
 	);
 };
 
-export default legal;
+export default Home;
