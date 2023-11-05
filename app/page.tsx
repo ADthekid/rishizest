@@ -19,6 +19,7 @@ const figtreeNormal = Figtree({
 const Home = () => {
 	const [cans, setCans] = useState(0);
 	const [value, setValue] = useState(5);
+	const [isEditing, setIsEditing] = useState(false);
 	const router = useRouter();
 
 	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -43,9 +44,17 @@ const Home = () => {
 	};
 
 	const handleNumberInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-		const value = parseInt(e.target.value, 10);
-		if (!isNaN(value) && value >= 0 && value <= 100) {
-			setValue(value);
+		const newValue = parseInt(e.target.value, 10);
+		setValue(newValue);
+		setIsEditing(true);
+	};
+
+	const handleBlur = () => {
+		setIsEditing(false);
+		if (value < 5) {
+			setValue(5);
+		} else if (value > 69) {
+			setValue(69);
 		}
 	};
 
@@ -148,6 +157,7 @@ const Home = () => {
 													type="number"
 													value={value}
 													onChange={handleNumberInputChange}
+													onBlur={handleBlur}
 													min={5}
 													max={69}
 												></input>
