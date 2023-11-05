@@ -93,7 +93,7 @@ body::-webkit-scrollbar {
 }
 
 .radioLabel {
-  margin-left: 0.0125vh;
+  margin-left: 1.25vh;
   transform: translateY(0.625vh);
 }
 
