@@ -85,7 +85,7 @@ const legal = () => {
 						<div
 							className={`flex items-center justify-center ${figtreeBold.className}`}
 						>
-							<a href="/outro">
+							<a href="/success">
 								<button
 									className="text-3xl bg-black px-[32px] py-[15px] rounded-full mt-[20px] text-white"
 									type="submit"

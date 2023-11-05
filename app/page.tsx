@@ -26,7 +26,7 @@ const Home = () => {
 		e.preventDefault();
 		console.log(cans);
 		localStorage.setItem("cans", JSON.stringify(cans));
-		router.push("/info");
+		router.push("/shipping");
 	};
 
 	const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
