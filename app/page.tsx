@@ -18,7 +18,7 @@ const figtreeNormal = Figtree({
 
 const Home = () => {
 	const [cans, setCans] = useState(0);
-	const [value, setValue] = useState(5);
+	const [value, setValue] = useState("5");
 	const [isEditing, setIsEditing] = useState(false);
 	const router = useRouter();
 
@@ -38,24 +38,29 @@ const Home = () => {
 				setCans(3);
 				break;
 			case "customCans":
-				setCans(value);
+				setCans(parseInt(value));
 				break;
 		}
 	};
 
 	const handleNumberInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-		const newValue = parseInt(e.target.value, 10);
+		const newValue = e.target.value;
 		setValue(newValue);
 		setIsEditing(true);
 	};
 
 	const handleBlur = () => {
 		setIsEditing(false);
-		if (value < 5 || isNaN(value)) {
-			setValue(5);
-		} else if (value > 69) {
-			setValue(69);
+		let newValue = value;
+		if (/^0[0-9]*$/.test(value)) {
+			newValue = value.replace(/^0+/, "");
 		}
+		if (parseInt(newValue) < 5 || isNaN(parseInt(newValue))) {
+			newValue = "5";
+		} else if (parseInt(newValue) > 69) {
+			newValue = "69";
+		}
+		setValue(newValue);
 	};
 
 	useEffect(() => {

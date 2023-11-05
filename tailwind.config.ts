@@ -21,7 +21,7 @@ const config: Config = {
 		extend: {
 			colors: {
 				zestygreen: "#e6f50e",
-				darkzestygreen: "#b0f50e",
+				darkzestygreen: "#b6ff00",
 				zestypurple: "#770cff",
 				darkpurple: "#c400ff",
 				lightpurple: "#780bff",
