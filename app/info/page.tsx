@@ -106,6 +106,7 @@ const Home = () => {
 										name="email"
 										required
 										placeholder="EMAIL"
+										pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
 										className="infoField border-[6px] rounded-xl border-darkzestygreen text-black bg-white text-xl px-[10px] py-[7px] mb-[12.5px] w-[75vw] max-w-[770px]"
 									></input>
 									<input
