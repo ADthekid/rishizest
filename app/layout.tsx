@@ -28,6 +28,7 @@ export default function RootLayout({
 		>
 			<Head>
 				<meta property="og:image" content="/opengraph-image.png" />
+				<meta name="theme-color" content="#b0f50e"></meta>
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1"
