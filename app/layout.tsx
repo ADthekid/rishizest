@@ -13,7 +13,7 @@ const figtree = Figtree({
 export const metadata: Metadata = {
 	title: "Reserve your RishiZest",
 	description:
-		"We're trying to shake things up as an independent energy drink company and make the most intense energy drink we legally can. Reserve a can of our flagship flavor today.",
+		"We're making the most intense energy drink we legally can. Reserve a can of our flagship flavor today.",
 };
 
 export default function RootLayout({
@@ -28,7 +28,8 @@ export default function RootLayout({
 		>
 			<Head>
 				<meta property="og:image" content="/opengraph-image.png" />
-				<meta name="theme-color" content="#b0f50e"></meta>
+				<meta property="og:image:width" content="630" />
+				<meta property="og:image:height" content="630" />
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1"
