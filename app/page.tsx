@@ -43,7 +43,10 @@ const Home = () => {
 	};
 
 	const handleNumberInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-		setValue(Number(e.target.value));
+		const value = parseInt(e.target.value, 10);
+		if (!isNaN(value) && value >= 0 && value <= 100) {
+			setValue(value);
+		}
 	};
 
 	useEffect(() => {

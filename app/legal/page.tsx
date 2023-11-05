@@ -28,7 +28,7 @@ const Home = () => {
 							LEGAL STUFF
 						</h1>
 						<div
-							className={`md:w-[770px] w-[75vw] text-lg pb-[calc(70px+7.5dvh)] ${figtreeNormal.className}`}
+							className={`md:w-[770px] w-[75vw] text-lg pb-[calc(70px+7.5dvh)] text-white ${figtreeNormal.className}`}
 						>
 							<p className="legalP pb-[.5dvh] indent-[30px]">
 								This agreement is entered into between RishiZest, an energy

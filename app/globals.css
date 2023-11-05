@@ -103,10 +103,13 @@ body::-webkit-scrollbar {
   box-shadow: none;
   margin: 0;
   padding: 0;
+  padding-left: 0.78125vh;
   font-size: 3.125vh;
   cursor: pointer;
   width: 6.875vh;
   transform: translateY(0.625vh);
+  background: #d4d4d4;
+  border-radius: 10px;
 }
 
 .reserve {
@@ -126,7 +129,7 @@ body::-webkit-scrollbar {
 }
 
 .legalP {
-  text-align: center;
+  text-align: left;
 }
 
 @media only screen and (min-height: 700px){

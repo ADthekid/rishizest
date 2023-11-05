@@ -118,7 +118,7 @@ const Home = () => {
 									<input
 										id="addyTwo"
 										name="addyTwo"
-										placeholder="ADDY LINE TWO"
+										placeholder="ADDRESS LINE TWO"
 										className="infoField border-[6px] rounded-xl border-darkzestygreen text-black bg-white text-xl px-[10px] py-[7px] mb-[12.5px] w-[75vw] max-w-[770px]"
 									></input>
 									<div className="mb-[63px]">
