@@ -370,11 +370,11 @@ const Home = () => {
 											</svg>
 										</div>
 										<p
-											className={`faqText text-[20px] text-left mt-[10px] break-words ${five}`}
+											className={`faqText text-[20px] text-left mt-[10px] ${five}`}
 										>
 											RishiZest is legally a sole proprietorship of Soorya
 											Ignatius. Any inquiries regarding involvement can be sent
-											to support@rishizest.com.
+											to rishizest.com.
 										</p>
 									</button>
 									<button onClick={handleSix} className="faq">
@@ -471,7 +471,7 @@ const Home = () => {
 											</svg>
 										</div>
 										<p
-											className={`faqText text-[20px] text-left mt-[10px] break-words ${seven}`}
+											className={`faqText text-[20px] text-left mt-[10px] ${seven}`}
 										>
 											No worries! Contact us at support@rishizest.com and
 											we&apos;ll get back to you as soon as we can. All
