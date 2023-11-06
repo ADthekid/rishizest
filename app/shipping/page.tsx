@@ -157,6 +157,18 @@ const Home = () => {
 												required
 												placeholder="CITY"
 												className="infoField border-[6px] rounded-xl border-darkzestygreen text-black bg-white text-xl px-[10px] py-[7px] mr-[12.5px] mb-[12.5px] w-[75vw] sm:w-[calc(25vw-10px)] sm:max-w-[248.3333333333px]"
+												onBlur={(event) => {
+													const input = event.target;
+													const words = input.value.toLowerCase().split(" ");
+
+													for (let i = 0; i < words.length; i++) {
+														words[i] =
+															words[i].charAt(0).toUpperCase() +
+															words[i].slice(1);
+													}
+
+													input.value = words.join(" ");
+												}}
 											></input>
 											<input
 												id="state"
