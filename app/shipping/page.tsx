@@ -107,6 +107,11 @@ const Home = () => {
 										required
 										placeholder="EMAIL"
 										pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+										onKeyPress={(event) => {
+											if (event.key === " ") {
+												event.preventDefault();
+											}
+										}}
 										className="infoField border-[6px] rounded-xl border-darkzestygreen text-black bg-white text-xl px-[10px] py-[7px] mb-[12.5px] w-[75vw] max-w-[770px]"
 									></input>
 									<input
@@ -115,12 +120,34 @@ const Home = () => {
 										required
 										placeholder="ADDRESS"
 										className="infoField border-[6px] rounded-xl border-darkzestygreen text-black bg-white text-xl px-[10px] py-[7px] mb-[12.5px] w-[75vw] max-w-[770px]"
+										onBlur={(event) => {
+											const input = event.target;
+											const words = input.value.toLowerCase().split(" ");
+
+											for (let i = 0; i < words.length; i++) {
+												words[i] =
+													words[i].charAt(0).toUpperCase() + words[i].slice(1);
+											}
+
+											input.value = words.join(" ");
+										}}
 									></input>
 									<input
 										id="addyTwo"
 										name="addyTwo"
 										placeholder="ADDRESS LINE TWO"
 										className="infoField border-[6px] rounded-xl border-darkzestygreen text-black bg-white text-xl px-[10px] py-[7px] mb-[12.5px] w-[75vw] max-w-[770px]"
+										onBlur={(event) => {
+											const input = event.target;
+											const words = input.value.toLowerCase().split(" ");
+
+											for (let i = 0; i < words.length; i++) {
+												words[i] =
+													words[i].charAt(0).toUpperCase() + words[i].slice(1);
+											}
+
+											input.value = words.join(" ");
+										}}
 									></input>
 									<div className="mb-[63px]">
 										<div className="sm:flex w-[75vw] sm:justify-center pb-[2px]">
@@ -136,7 +163,16 @@ const Home = () => {
 												name="state"
 												required
 												placeholder="STATE"
+												maxLength={2}
 												className="infoField border-[6px] rounded-xl border-darkzestygreen text-black bg-white text-xl px-[10px] py-[7px] mr-[12.5px] mb-[12.5px] w-[75vw] sm:w-[calc(25vw-10px)] sm:max-w-[248.3333333333px]"
+												onKeyPress={(event) => {
+													if (!/[A-Za-z]/.test(event.key)) {
+														event.preventDefault();
+													}
+												}}
+												onBlur={(event) => {
+													event.target.value = event.target.value.toUpperCase();
+												}}
 											></input>
 											<input
 												id="zip"
