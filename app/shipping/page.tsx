@@ -79,6 +79,23 @@ const Home = () => {
 											required
 											placeholder="FIRST NAME"
 											className="infoField border-[6px] rounded-xl border-darkzestygreen text-black bg-white text-xl px-[10px] py-[7px] mr-[12.5px] lg:w-[377.5px] mb-[12.5px] w-[75vw]"
+											onKeyPress={(event) => {
+												if (event.key === " ") {
+													event.preventDefault();
+												}
+											}}
+											onBlur={(event) => {
+												const input = event.target;
+												const words = input.value.toLowerCase().split(" ");
+
+												for (let i = 0; i < words.length; i++) {
+													words[i] =
+														words[i].charAt(0).toUpperCase() +
+														words[i].slice(1);
+												}
+
+												input.value = words.join(" ");
+											}}
 										></input>
 										<input
 											id="last"
@@ -86,6 +103,23 @@ const Home = () => {
 											required
 											placeholder="LAST NAME"
 											className="infoField border-[6px] rounded-xl border-darkzestygreen text-black bg-white text-xl px-[10px] py-[7px] lg:w-[377.5px] mb-[12.5px] w-[75vw]"
+											onKeyPress={(event) => {
+												if (event.key === " ") {
+													event.preventDefault();
+												}
+											}}
+											onBlur={(event) => {
+												const input = event.target;
+												const words = input.value.toLowerCase().split(" ");
+
+												for (let i = 0; i < words.length; i++) {
+													words[i] =
+														words[i].charAt(0).toUpperCase() +
+														words[i].slice(1);
+												}
+
+												input.value = words.join(" ");
+											}}
 										></input>
 									</div>
 									<input
