@@ -473,8 +473,8 @@ const Home = () => {
 										<p
 											className={`faqText text-[20px] text-left mt-[10px] ${seven}`}
 										>
-											No worries! Contact us at support{"@"}rishizestdotcom and
-											we&apos;ll get back to you as soon as we can. All
+											No worries! Contact us at support{"@"}rishizest{"."}com
+											and we&apos;ll get back to you as soon as we can. All
 											questions are welcome.
 										</p>
 									</button>
