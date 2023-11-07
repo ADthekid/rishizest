@@ -47,10 +47,19 @@ const Home = () => {
 						>
 							<p className="text-black text-left md:text-justify">
 								Thank you for your order of {cans} {cans === 1 ? "can" : "cans"}
-								. An invoice for ${amount} USD will be sent to your email as
-								soon as your order is ready. In the meantime, if you&apos;d like
-								to stay informed about what we&apos;re up to, make sure to find
-								us on Instagram&nbsp;
+								. An invoice for ${amount} USD, tax and shipping included, will
+								be sent to your email as soon as your order is ready in roughly
+								3-6 months. If you wish to cancel or modify your preorder, send
+								an email with your information to{" "}
+								<a
+									href="mailto:support@rishizest.com"
+									target="new"
+									className="social link"
+								>
+									support@rishizest.com
+								</a>
+								. In the meantime, stay informed about what we&apos;re up to on
+								Instagram &nbsp;
 								<a
 									href="https://www.instagram.com/rishizest/"
 									target="new"
