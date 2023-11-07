@@ -109,7 +109,7 @@ body::-webkit-scrollbar {
   width: 6.875vh;
   transform: translateY(0.625vh);
   background: #d4d4d4;
-  border-radius: 10px;
+  border-radius: 1.25vh;
 }
 
 .reserve {
