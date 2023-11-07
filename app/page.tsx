@@ -138,7 +138,10 @@ const Home = () => {
 												alt="three cans"
 											></img>
 										</label>
-										<label htmlFor="customCans" className="rectangle-container">
+										<label
+											htmlFor="customCans"
+											className="rectangle-container right"
+										>
 											<div className="flex items-center">
 												<input
 													className="radioButton"

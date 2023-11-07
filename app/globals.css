@@ -163,6 +163,11 @@ body::-webkit-scrollbar {
       scroll-snap-stop: always;
     }
 
+    .scrollContainer {
+      scroll-snap-type: x mandatory;
+      padding-right: 10px;
+    }
+
     select {
       outline: none;
       border: none;
@@ -298,6 +303,7 @@ div {
 
 .scrollContainer {
   scroll-snap-type: x mandatory;
+  padding-right:1.25vh;
 }
 
 .bannerLogo{
