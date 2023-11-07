@@ -102,10 +102,7 @@ const Home = () => {
 							<form onSubmit={handleSubmit} id="form">
 								<fieldset className="flex flex-col items-center">
 									<div className="flex w-[100vw] sm:w-[100%] overflow-x-auto scrollContainer">
-										<label
-											htmlFor="oneCan"
-											className="rectangle-container left"
-										>
+										<label htmlFor="oneCan" className="rectangle-container">
 											<div className="flex items-center">
 												<input
 													className="radioButton"
@@ -121,10 +118,7 @@ const Home = () => {
 											</div>
 											<img className="cans" src="one.png" alt="one can"></img>
 										</label>
-										<label
-											htmlFor="threeCans"
-											className="rectangle-container middle"
-										>
+										<label htmlFor="threeCans" className="rectangle-container">
 											<div className="flex items-center">
 												<input
 													className="radioButton"
@@ -144,10 +138,7 @@ const Home = () => {
 												alt="three cans"
 											></img>
 										</label>
-										<label
-											htmlFor="customCans"
-											className="rectangle-container right"
-										>
+										<label htmlFor="customCans" className="rectangle-container">
 											<div className="flex items-center">
 												<input
 													className="radioButton"
