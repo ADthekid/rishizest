@@ -20,10 +20,10 @@ const Home = () => {
 				<ScrollingBar />
 			</div>
 			<div
-				className={`grad h-[calc(100dvh-140px)] sm:h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] ${figtreeBold.className}`}
+				className={`grad h-[calc(83.333333334dvh)] md:h-[calc(100vh-180px)] ${figtreeBold.className}`}
 			>
 				<div className="sect">
-					<div className="flex flex-col items-center h-[calc(100dvh-140px)] md:h-[calc(100dvh-180px)] overflow-y-scroll">
+					<div className="flex flex-col items-center h-[calc(83.333333334dvh)] md:h-[calc(100dvh-180px)] overflow-y-scroll">
 						<h1 className="flex text-7xl pt-[7.5dvh] pb-[4dvh] text-center max-w-[75vw] text-white">
 							LEGAL STUFF
 						</h1>

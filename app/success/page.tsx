@@ -35,10 +35,10 @@ const Home = () => {
 				<ScrollingBar />
 			</div>
 			<div
-				className={`grad h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] ${figtreeBold.className}`}
+				className={`grad h-[calc(83.333333334dvh)] md:h-[calc(100vh-180px)] ${figtreeBold.className}`}
 			>
 				<div className="sect">
-					<div className="flex flex-col items-center md:justify-center pt-[7.5vh] md:py-[0px] items-center h-[calc(100vh-140px)] md:h-[calc(100vh-180px)] pb-[7.5vh] overflow-y-scroll">
+					<div className="flex flex-col items-center md:justify-center pt-[7.5vh] md:py-[0px] items-center h-[calc(83.333333334dvh)] md:h-[calc(100vh-180px)] pb-[7.5vh] overflow-y-scroll">
 						<h1 className="flex text-7xl pb-[4vh] text-center max-w-[75vw] text-white">
 							ORDER PLACED
 						</h1>
@@ -59,7 +59,7 @@ const Home = () => {
 									support@rishizest.com
 								</a>
 								. In the meantime, stay informed about what we&apos;re up to on
-								Instagram &nbsp;
+								Instagram&nbsp;
 								<a
 									href="https://www.instagram.com/rishizest/"
 									target="new"

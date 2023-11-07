@@ -84,11 +84,11 @@ const Home = () => {
 				<ScrollingBar />
 			</div>
 			<div
-				className={`h-[calc(100dvh-140px)] md:h-[calc(100dvh-180px)] sm:h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] ${figtree.className}`}
+				className={`h-[calc(83.333333334dvh)] md:h-[calc(100dvh-180px)] sm:h-[calc(83.333333334dvh)] md:h-[calc(100vh-180px)] ${figtree.className}`}
 			>
 				<div className="grad">
 					<div className="sect">
-						<div className="h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] flex flex-col items-center justify-center overflow-hidden">
+						<div className="h-[calc(83.333333334dvh)] md:h-[calc(100vh-180px)] flex flex-col items-center justify-center overflow-hidden">
 							<div className="flex flex-col md:flex-row items-center">
 								<h1 className="reserve whitespace-nowrap">RESERVE YOUR</h1>
 								<img className="reserveImage" src="logo.png" />

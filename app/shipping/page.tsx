@@ -17,6 +17,11 @@ const figtreeNormal = Figtree({
 	subsets: ["latin"],
 });
 
+const figtreeSevenhunnid = Figtree({
+	weight: "700",
+	subsets: ["latin"],
+});
+
 const Home = () => {
 	const router = useRouter();
 
@@ -60,13 +65,15 @@ const Home = () => {
 			</div>
 			<div>
 				<div
-					className={`grad h-[calc(100dvh-140px)] sm:h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] ${figtree.className}`}
+					className={`grad h-[calc(83.333333334dvh)] md:h-[calc(100vh-180px)] ${figtree.className}`}
 				>
 					<div className="sect">
-						<div className="flex flex-col items-center h-[calc(100dvh-140px)] sm:h-[calc(100dvh-140px)] md:h-[calc(100vh-180px)] overflow-y-scroll">
-							<h1 className="flex text-7xl pt-[7.5dvh] pb-[5dvh] text-center max-w-[75vw] text-white">
-								ADD YOUR INFO
-							</h1>
+						<div className="flex flex-col items-center h-[calc(83.333333334dvh)] md:h-[calc(100vh-180px)] overflow-y-scroll">
+							<div className="pt-[7.5dvh] pb-[5dvh] flex flex-col">
+								<h1 className="flex text-7xl text-center max-w-[75vw] text-white">
+									ADD YOUR INFO
+								</h1>
+							</div>
 							<div className={`w-[75vw] text-2xl ${figtreeNormal.className}`}>
 								<form
 									onSubmit={handleSubmit}
