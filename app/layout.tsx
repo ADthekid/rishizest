@@ -28,6 +28,10 @@ export default function RootLayout({
 		>
 			<Head>
 				<meta property="og:image" content="/opengraph-image.png" />
+				<meta
+					property="og:description"
+					content="We're making the most intense energy drink we legally can. Reserve a can of our flagship flavor today."
+				/>
 				<meta property="og:url" content="rishizest.com"></meta>
 				<meta property="og:image:width" content="630" />
 				<meta property="og:image:height" content="630" />
