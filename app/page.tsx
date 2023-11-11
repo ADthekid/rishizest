@@ -97,7 +97,7 @@ const Home = () => {
 								className={`link text-[15px] md:text-[20px] leading-[15px] md:leading-[20px] text-center py-[5px] ${figtreeNormal.className}`}
 								href="/faq"
 							>
-								(or get answers to some frequently asked questions)
+								(or click this to get some answers to your questions)
 							</a>
 							<form onSubmit={handleSubmit} id="form">
 								<fieldset className="flex flex-col items-center">
