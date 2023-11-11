@@ -42,8 +42,7 @@ function ScrollLeft() {
 						<img
 							className="bannerLogo inline-block md:ml-4 ml-[1.9047619048dvh] w-[3.452380952dvh] md:w-[39px]"
 							src="icon.png"
-							width="39px"
-							height="auto"
+							alt="black banner logo"
 						></img>
 					</p>
 				))}
