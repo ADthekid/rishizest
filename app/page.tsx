@@ -91,7 +91,11 @@ const Home = () => {
 						<div className="h-[calc(83.333333334dvh)] md:h-[calc(100vh-180px)] flex flex-col items-center justify-center overflow-hidden">
 							<div className="flex flex-col md:flex-row items-center">
 								<h1 className="reserve whitespace-nowrap">RESERVE YOUR</h1>
-								<img className="reserveImage" src="logo.png" />
+								<img
+									className="reserveImage"
+									alt="Logo Banner"
+									src="logo.png"
+								/>
 							</div>
 							<a
 								className={`link text-[15px] md:text-[20px] leading-[15px] md:leading-[20px] text-center py-[5px] ${figtreeNormal.className}`}
@@ -167,7 +171,7 @@ const Home = () => {
 											<img
 												className="cans"
 												src="silhouette.png"
-												alt="custom"
+												alt="custom number"
 											></img>
 										</label>
 									</div>
